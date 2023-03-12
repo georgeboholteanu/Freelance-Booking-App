@@ -1,21 +1,21 @@
 // jshint esversion: 6
 // import data from "./users.json";
 const data = require("./src/users.json");
-const fs = require('fs')
+const fs = require("fs");
 
 // console.log(data);
 
 // write that to the
 
-// const express = require("express");
+const express = require("express");
 // // import { Express } from "express";
 
 const app = express();
 
 app.get("/api", (req, res) => {
   res.json({
-    // users: ["user1", "user2", "user3", "user4", "aaa"],
-    users: data,
+    // users: ["user1", "user2", "user3", "user4", "aaabbb"],
+    users: data.users,
   });
 });
 
@@ -27,20 +27,16 @@ app.put("/api/:id", (req, res) => {
   // {
   //   availability: false
   // }
-  const availability = req.body.availability
+  const availability = req.body.availability;
 
   // use array .find to get the object you want
 
   // update there avail prop
 
   // respond to the client
-  res.end()
-
-
-  
+  res.end();
 });
 
 app.listen(5000, () => {
   console.log("Server Started on port 5000");
-  // console.log(__dirname + "/src/database.json")
 });
