@@ -1,20 +1,21 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Nav } from "./components/Nav";
 // import { Banner } from "./components/Banner";
 
 function App() {
-  const [backendData, setbackendData] = useState([{}]);
+  const [backendData, setbackendData] = useState([]);
 
+  const fetchData = async () => {
+    const { data } = await axios.get("/api");
+    console.log(JSON.stringify(data.users));
+    setbackendData(data.users);
+  };
   useEffect(() => {
-    fetch("/api")
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .then((data) => {
-        setbackendData(data.users);
-      });
-  }, []); //it runs only on the first render of the component
+    fetchData();
+  }, []);
 
   return (
     <div id="gallery">
@@ -22,9 +23,7 @@ function App() {
         {typeof backendData.users === "undefined" ? (
           <p>Loading...</p>
         ) : (
-          backendData.users.map((user) => (
-        <p key={user.id}>{user.email}</p>
-          ))
+          (backendData.users).map((user) => <p key={user.id.value}>{user.email}</p>)
         )}
       </div>
     </div>

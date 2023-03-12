@@ -17,7 +17,7 @@
       },
       "email": "ivan.little@example.com",
       "phone": "013873 26506",
-      "picture": "user1.jpg",
+      "picture": "/src/user1.jpg",
       "availability": true,
       "id": 1
     },
@@ -38,7 +38,7 @@
       },
       "email": "debra.clark@example.com",
       "phone": "017683 03926",
-      "picture": "user2.jpg",
+      "picture": "/src/user2.jpg",
       "availability": false,
       "id": 2
     },
@@ -59,7 +59,7 @@
       },
       "email": "alexandra.cole@example.com",
       "phone": "015242 66125",
-      "picture": "user3.jpg",
+      "picture": "/src/user3.jpg",
       "availability": true,
       "id": 3
     },
@@ -80,7 +80,7 @@
       },
       "email": "becky.taylor@example.com",
       "phone": "017684 29414",
-      "picture": "user4.jpg",
+      "picture": "/src/user4.jpg",
       "availability": true,
       "id": 4
     },
@@ -98,7 +98,7 @@
       },
       "email": "anna.nguyen@example.com",
       "phone": "01505 199364",
-      "picture": "user5.jpg",
+      "picture": "/src/user5.jpg",
       "availability": false,
       "id": 5
     },
@@ -119,7 +119,7 @@
       },
       "email": "ashley.james@example.com",
       "phone": "015394 17612",
-      "picture": "user6.jpg",
+      "picture": "/src/user6.jpg",
       "availability": true,
       "id": 6
     },
@@ -140,7 +140,7 @@
       },
       "email": "jamie.foster@example.com",
       "phone": "016977 59141",
-      "picture": "user7.jpg",
+      "picture": "/src/user7.jpg",
       "availability": true,
       "id": 7
     },
@@ -161,7 +161,7 @@
       },
       "email": "terrence.reed@example.com",
       "phone": "015242 35827",
-      "picture": "user8.jpg",
+      "picture": "/src/user8.jpg",
       "availability": true,
       "id": 8
     },
@@ -179,7 +179,7 @@
       },
       "email": "ellie.allen@example.com",
       "phone": "026 0333 2501",
-      "picture": "user9.jpg",
+      "picture": "/src/user9.jpg",
       "availability": false,
       "id": 9
     },
@@ -200,7 +200,7 @@
       },
       "email": "deborah.harrison@example.com",
       "phone": "01578 784346",
-      "picture": "user10.jpg",
+      "picture": "/src/user10.jpg",
       "availability": true,
       "id": 10
     },
@@ -221,7 +221,7 @@
       },
       "email": "phil.crawford@example.com",
       "phone": "015242 35831",
-      "picture": "user11.jpg",
+      "picture": "/src/user11.jpg",
       "availability": true,
       "id": 11
     },
@@ -242,7 +242,7 @@
       },
       "email": "tristan.mccoy@example.com",
       "phone": "017684 44875",
-      "picture": "user12.jpg",
+      "picture": "/src/user12.jpg",
       "availability": true,
       "id": 12
     },
@@ -263,7 +263,7 @@
       },
       "email": "sofia.rice@example.com",
       "phone": "0191 874 1037",
-      "picture": "user13.jpg",
+      "picture": "/src/user13.jpg",
       "availability": false,
       "id": 13
     },
@@ -284,7 +284,7 @@
       },
       "email": "lucas.watson@example.com",
       "phone": "015394 06981",
-      "picture": "user14.jpg",
+      "picture": "/src/user14.jpg",
       "availability": true,
       "id": 14
     },
@@ -305,7 +305,7 @@
       },
       "email": "kent.reid@example.com",
       "phone": "016974 14204",
-      "picture": "user15.jpg",
+      "picture": "/src/user15.jpg",
       "availability": true,
       "id": 15
     }
