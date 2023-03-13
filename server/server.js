@@ -2,27 +2,22 @@
 // import data from "./users.json";
 const data = require("./src/users.json");
 const fs = require("fs");
-const path = require('path');
-
-// console.log(data);
-
-// write that to the
+// const path = require("path");
 
 const express = require("express");
-// // import { Express } from "express";
-
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, "public")));
+
 app.get("/", (req, res) => res.send("Helloooo"));
-app.get("/api", (req, res) => {
+app.get("/public", (req, res) => {
   res.json({
     // users: ["user1", "user2", "user3", "user4", "aaabbb"],
     users: data.users,
   });
 });
 
-app.put("/api/:id", (req, res) => {
+app.put("/public/:id", (req, res) => {
   // extract the id from the parms
   const id = req.params.id;
 

@@ -8,12 +8,12 @@ import axios from "axios";
 // import { Banner } from "./components/Banner";
 
 function App() {
-  // const imagePath = path.join('/', 'images', 'example.jpg');
 
   const [backendData, setbackendData] = useState([{}]);
+  const doThis = (() => console.log("this"))
 
   const fetchData = async () => {
-    const { data } = await axios.get("/api");
+    const { data } = await axios.get("/public");
     console.log(data);
     setbackendData(data);
   };
@@ -22,23 +22,30 @@ function App() {
   }, []);
 
   return (
-    <div id="gallery">
-      <div className="max-w-screen-xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10">
-        <div>
-          {backendData.length > 0 ? (
-            <p>Loading...</p>
-          ) : (
-            backendData.users.map((user) => (
-              <div key={user.id}>
-                <h2>{`${user.name.title} ${user.name.first} ${user.name.last}`}</h2>
-                <p>{`Email: ${user.email}`}</p>
-                <p>{`Phone: ${user.phone}`}</p>
-                <img src={`${window.location.origin}${user.picture}`} alt="user avatar" />
-              </div>
-            ))
+    <div id="gallery" className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10">
+      {backendData.length > 0 ? (
+          <p>Loading...</p>
+          ) : (       
+          backendData.users.map((user) => (
+
+          <div className="max-w-sm rounded overflow-hidden shadow-lg" key={user.id}>
+            <img className="w-full" src={`${window.location.origin}${user.picture}`} alt="user avatar"/>
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">{`${user.name.title} ${user.name.first} ${user.name.last}`}</div>
+              <p className="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Frontend</span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML</span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#CSS</span>
+              <button onClick={doThis} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Book Me</button>
+
+            </div>
+          </div>
+          ))
           )}
-        </div>
-      </div>
     </div>
   );
 }
