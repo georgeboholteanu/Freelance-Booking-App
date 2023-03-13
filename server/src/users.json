@@ -18,7 +18,7 @@
       "email": "ivan.little@example.com",
       "phone": "013873 26506",
       "picture": "/public/user1.jpg",
-      "availability": true,
+      "availability": false,
       "id": 1
     },
     {
@@ -39,7 +39,7 @@
       "email": "debra.clark@example.com",
       "phone": "017683 03926",
       "picture": "/public/user2.jpg",
-      "availability": false,
+      "availability": true,
       "id": 2
     },
     {
@@ -81,7 +81,7 @@
       "email": "becky.taylor@example.com",
       "phone": "017684 29414",
       "picture": "/public/user4.jpg",
-      "availability": true,
+      "availability": false,
       "id": 4
     },
     {
@@ -141,7 +141,7 @@
       "email": "jamie.foster@example.com",
       "phone": "016977 59141",
       "picture": "/public/user7.jpg",
-      "availability": true,
+      "availability": false,
       "id": 7
     },
     {
@@ -264,7 +264,7 @@
       "email": "sofia.rice@example.com",
       "phone": "0191 874 1037",
       "picture": "/public/user13.jpg",
-      "availability": false,
+      "availability": true,
       "id": 13
     },
     {
@@ -306,7 +306,7 @@
       "email": "kent.reid@example.com",
       "phone": "016974 14204",
       "picture": "/public/user15.jpg",
-      "availability": true,
+      "availability": false,
       "id": 15
     }
   ]

@@ -10,7 +10,7 @@ const app = express();
 // app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => res.send("Helloooo"));
-app.get("/public", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({
     // users: ["user1", "user2", "user3", "user4", "aaabbb"],
     users: data.users,
