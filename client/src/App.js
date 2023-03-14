@@ -13,14 +13,16 @@ function App() {
   const bookUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`/api/${backendData.users.id}`, {
-        availability: backendData.users.availability,
-      });
-      console.log(response.backendData.users);
+      axios({method:"put"})
+      // const response = await axios.put(`/api/test`, {
+      //   availability: backendData.users.availability,
+      // });
+      // console.log(response.backendData.users);
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   const fetchData = async () => {
     const { data } = await axios.get("/api");
@@ -46,7 +48,8 @@ function App() {
           >
             <img
               className="w-full"
-              src={`${window.location.origin}${user.picture}`}
+              src={`http://localhost:5000/api/test/public/${user.picture}`}
+              // ${window.location.origin}
               alt="user avatar"
             />
             <div className="px-6 py-4">
