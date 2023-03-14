@@ -6,9 +6,9 @@ import axios from "axios";
 // import { Nav } from "./components/Nav";
 // import { Navlink } from "./components/Banner";
 
-function Home() {
+function User() {
   const [backendData, setbackendData] = useState([{}]);
-
+    
   // WIP
   const bookUser = async (e) => {
     e.preventDefault();
@@ -94,4 +94,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default User;
