@@ -1,304 +1,274 @@
 {
   "users": [
     {
-      "name": {
-        "title": "Mr",
-        "first": "Terry",
-        "last": "Bryant"
-      },
+      "name": { "title": "Mr", "first": "Terry", "last": "Bryant" },
       "email": "terry.bryant@example.com",
       "phone": "01457 310218",
-      "picture": "user1.jpg"
+      "picture": "user1.jpg",
+      "availability": true,
+      "id": 1,
+      "skills": ["Typescript", "ASP.NET", "Tailwind"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Ronnie",
-        "last": "Jensen"
-      },
+      "name": { "title": "Mr", "first": "Ronnie", "last": "Jensen" },
       "email": "ronnie.jensen@example.com",
       "phone": "0117732 370 7838",
-      "picture": "user2.jpg"
+      "picture": "user2.jpg",
+      "availability": true,
+      "id": 2,
+      "skills": ["Flask", "Laravel", "MongoDB"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Logan",
-        "last": "Watts"
-      },
+      "name": { "title": "Mr", "first": "Logan", "last": "Watts" },
       "email": "logan.watts@example.com",
       "phone": "01417 99227",
-      "picture": "user3.jpg"
+      "picture": "user3.jpg",
+      "availability": true,
+      "id": 3,
+      "skills": ["CSS", "Python", "Laravel"]
     },
     {
-      "name": {
-        "title": "Mrs",
-        "first": "Amber",
-        "last": "Stanley"
-      },
+      "name": { "title": "Mrs", "first": "Amber", "last": "Stanley" },
       "email": "amber.stanley@example.com",
       "phone": "015395 61712",
-      "picture": "user4.jpg"
+      "picture": "user4.jpg",
+      "availability": false,
+      "id": 4,
+      "skills": ["Tailwind", "Flask", "HTML"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "David",
-        "last": "Carlson"
-      },
+      "name": { "title": "Mr", "first": "David", "last": "Carlson" },
       "email": "david.carlson@example.com",
       "phone": "019467 93270",
-      "picture": "user5.jpg"
+      "picture": "user5.jpg",
+      "availability": false,
+      "id": 5,
+      "skills": ["Bootstrap", "ASP.NET", "NodeJS"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Brittany",
-        "last": "Payne"
-      },
+      "name": { "title": "Miss", "first": "Brittany", "last": "Payne" },
       "email": "brittany.payne@example.com",
       "phone": "016974 20698",
-      "picture": "user6.jpg"
+      "picture": "user6.jpg",
+      "availability": true,
+      "id": 6,
+      "skills": ["Ruby", "CSS", "Typescript"]
     },
     {
-      "name": {
-        "title": "Mrs",
-        "first": "Amanda",
-        "last": "Fleming"
-      },
+      "name": { "title": "Mrs", "first": "Amanda", "last": "Fleming" },
       "email": "amanda.fleming@example.com",
       "phone": "01302 35441",
-      "picture": "user7.jpg"
+      "picture": "user7.jpg",
+      "availability": false,
+      "id": 7,
+      "skills": ["Laravel", "Ruby", "ASP.NET"]
     },
     {
-      "name": {
-        "title": "Mrs",
-        "first": "Alexandra",
-        "last": "Reed"
-      },
+      "name": { "title": "Mrs", "first": "Alexandra", "last": "Reed" },
       "email": "alexandra.reed@example.com",
       "phone": "0118687 300 1473",
-      "picture": "user8.jpg"
+      "picture": "user8.jpg",
+      "availability": false,
+      "id": 8,
+      "skills": ["HTML", "Javascript", "MongoDB"]
     },
     {
-      "name": {
-        "title": "Ms",
-        "first": "Brooke",
-        "last": "Fox"
-      },
+      "name": { "title": "Ms", "first": "Brooke", "last": "Fox" },
       "email": "brooke.fox@example.com",
       "phone": "017683 56091",
-      "picture": "user9.jpg"
+      "picture": "user9.jpg",
+      "availability": false,
+      "id": 9,
+      "skills": ["MongoDB", "NodeJS", "C++"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Juan",
-        "last": "Mccoy"
-      },
+      "name": { "title": "Mr", "first": "Juan", "last": "Mccoy" },
       "email": "juan.mccoy@example.com",
       "phone": "019467 88379",
-      "picture": "user10.jpg"
+      "picture": "user10.jpg",
+      "availability": false,
+      "id": 10,
+      "skills": ["NodeJS", "Python", "CSharp"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Mathew",
-        "last": "Frazier"
-      },
+      "name": { "title": "Mr", "first": "Mathew", "last": "Frazier" },
       "email": "mathew.frazier@example.com",
       "phone": "028 4775 7947",
-      "picture": "user11.jpg"
+      "picture": "user11.jpg",
+      "availability": true,
+      "id": 11,
+      "skills": ["Tailwind", "ASP.NET", "ExpressJS"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Alan",
-        "last": "Grant"
-      },
+      "name": { "title": "Mr", "first": "Alan", "last": "Grant" },
       "email": "alan.grant@example.com",
       "phone": "019467 11195",
-      "picture": "user12.jpg"
+      "picture": "user12.jpg",
+      "availability": false,
+      "id": 12,
+      "skills": ["ExpressJS", "ExpressJS", "Bootstrap"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Luke",
-        "last": "Burke"
-      },
+      "name": { "title": "Mr", "first": "Luke", "last": "Burke" },
       "email": "luke.burke@example.com",
       "phone": "021 1669 3057",
-      "picture": "user13.jpg"
+      "picture": "user13.jpg",
+      "availability": false,
+      "id": 13,
+      "skills": ["CSharp", "Laravel", "ExpressJS"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Fred",
-        "last": "Murray"
-      },
+      "name": { "title": "Mr", "first": "Fred", "last": "Murray" },
       "email": "fred.murray@example.com",
       "phone": "017687 16636",
-      "picture": "user14.jpg"
+      "picture": "user14.jpg",
+      "availability": false,
+      "id": 14,
+      "skills": ["React", "MongoDB", "MongoDB"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Bill",
-        "last": "Snyder"
-      },
+      "name": { "title": "Mr", "first": "Bill", "last": "Snyder" },
       "email": "bill.snyder@example.com",
       "phone": "0151 699 3545",
-      "picture": "user15.jpg"
+      "picture": "user15.jpg",
+      "availability": false,
+      "id": 15,
+      "skills": ["ASP.NET", "CSS", "Python"]
     },
     {
-      "name": {
-        "title": "Ms",
-        "first": "Rosalyn",
-        "last": "Moore"
-      },
+      "name": { "title": "Ms", "first": "Rosalyn", "last": "Moore" },
       "email": "rosalyn.moore@example.com",
       "phone": "01968 393011",
-      "picture": "user16.jpg"
+      "picture": "user16.jpg",
+      "availability": true,
+      "id": 16,
+      "skills": ["Bootstrap", "Flask", "CSS"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Allen",
-        "last": "Rodriguez"
-      },
+      "name": { "title": "Mr", "first": "Allen", "last": "Rodriguez" },
       "email": "allen.rodriguez@example.com",
       "phone": "017683 82603",
-      "picture": "user17.jpg"
+      "picture": "user17.jpg",
+      "availability": true,
+      "id": 17,
+      "skills": ["Python", "CSS", "HTML"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Suzanna",
-        "last": "Foster"
-      },
+      "name": { "title": "Miss", "first": "Suzanna", "last": "Foster" },
       "email": "suzanna.foster@example.com",
       "phone": "0110765 479 5076",
-      "picture": "user18.jpg"
+      "picture": "user18.jpg",
+      "availability": false,
+      "id": 18,
+      "skills": ["Tailwind", "Tailwind", "Flask"]
     },
     {
-      "name": {
-        "title": "Ms",
-        "first": "Caroline",
-        "last": "Tucker"
-      },
+      "name": { "title": "Ms", "first": "Caroline", "last": "Tucker" },
       "email": "caroline.tucker@example.com",
       "phone": "016977 8043",
-      "picture": "user19.jpg"
+      "picture": "user19.jpg",
+      "availability": false,
+      "id": 19,
+      "skills": ["ASP.NET", "Ruby", "ExpressJS"]
     },
     {
-      "name": {
-        "title": "Mrs",
-        "first": "Kim",
-        "last": "Rose"
-      },
+      "name": { "title": "Mrs", "first": "Kim", "last": "Rose" },
       "email": "kim.rose@example.com",
       "phone": "029 5858 9066",
-      "picture": "user20.jpg"
+      "picture": "user20.jpg",
+      "availability": true,
+      "id": 20,
+      "skills": ["Python", "MongoDB", "CSS"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Rebecca",
-        "last": "Romero"
-      },
+      "name": { "title": "Miss", "first": "Rebecca", "last": "Romero" },
       "email": "rebecca.romero@example.com",
       "phone": "0111 815 5870",
-      "picture": "user21.jpg"
+      "picture": "user21.jpg",
+      "availability": true,
+      "id": 21,
+      "skills": ["Typescript", "Ruby", "SQL"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Jacob",
-        "last": "Fletcher"
-      },
+      "name": { "title": "Mr", "first": "Jacob", "last": "Fletcher" },
       "email": "jacob.fletcher@example.com",
       "phone": "016977 78191",
-      "picture": "user22.jpg"
+      "picture": "user22.jpg",
+      "availability": true,
+      "id": 22,
+      "skills": ["CSS", "Typescript", "Javascript"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Ella",
-        "last": "Thompson"
-      },
+      "name": { "title": "Miss", "first": "Ella", "last": "Thompson" },
       "email": "ella.thompson@example.com",
       "phone": "016977 86195",
-      "picture": "user23.jpg"
+      "picture": "user23.jpg",
+      "availability": true,
+      "id": 23,
+      "skills": ["React", "Flask", "Typescript"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Alan",
-        "last": "Mitchell"
-      },
+      "name": { "title": "Mr", "first": "Alan", "last": "Mitchell" },
       "email": "alan.mitchell@example.com",
       "phone": "015394 79409",
-      "picture": "user24.jpg"
+      "picture": "user24.jpg",
+      "availability": true,
+      "id": 24,
+      "skills": ["Javascript", "CSharp", "NodeJS"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Jenny",
-        "last": "Green"
-      },
+      "name": { "title": "Miss", "first": "Jenny", "last": "Green" },
       "email": "jenny.green@example.com",
       "phone": "01551 72652",
-      "picture": "user25.jpg"
+      "picture": "user25.jpg",
+      "availability": false,
+      "id": 25,
+      "skills": ["Flask", "ExpressJS", "Python"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Vanessa",
-        "last": "Lambert"
-      },
+      "name": { "title": "Miss", "first": "Vanessa", "last": "Lambert" },
       "email": "vanessa.lambert@example.com",
       "phone": "0116919 447 7633",
-      "picture": "user26.jpg"
+      "picture": "user26.jpg",
+      "availability": false,
+      "id": 26,
+      "skills": ["MongoDB", "Flask", "Typescript"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Leroy",
-        "last": "Lynch"
-      },
+      "name": { "title": "Mr", "first": "Leroy", "last": "Lynch" },
       "email": "leroy.lynch@example.com",
       "phone": "019467 01579",
-      "picture": "user27.jpg"
+      "picture": "user27.jpg",
+      "availability": true,
+      "id": 27,
+      "skills": ["Flask", "React", "Ruby"]
     },
     {
-      "name": {
-        "title": "Mr",
-        "first": "Ricky",
-        "last": "Washington"
-      },
+      "name": { "title": "Mr", "first": "Ricky", "last": "Washington" },
       "email": "ricky.washington@example.com",
       "phone": "016974 72567",
-      "picture": "user28.jpg"
+      "picture": "user28.jpg",
+      "availability": true,
+      "id": 28,
+      "skills": ["Ruby", "Laravel", "Typescript"]
     },
     {
-      "name": {
-        "title": "Mrs",
-        "first": "Linda",
-        "last": "Hunt"
-      },
+      "name": { "title": "Mrs", "first": "Linda", "last": "Hunt" },
       "email": "linda.hunt@example.com",
       "phone": "019467 24965",
-      "picture": "user29.jpg"
+      "picture": "user29.jpg",
+      "availability": false,
+      "id": 29,
+      "skills": ["Laravel", "Typescript", "HTML"]
     },
     {
-      "name": {
-        "title": "Miss",
-        "first": "Emily",
-        "last": "Stevens"
-      },
+      "name": { "title": "Miss", "first": "Emily", "last": "Stevens" },
       "email": "emily.stevens@example.com",
       "phone": "020 4031 0249",
-      "picture": "user30.jpg"
+      "picture": "user30.jpg",
+      "availability": false,
+      "id": 30,
+      "skills": ["HTML", "React", "Javascript"]
     }
   ]
 }
