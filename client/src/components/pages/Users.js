@@ -1,10 +1,10 @@
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export const User = () => {
-
- const [backendData, setbackendData] = useState([{}]);
-
+function Users() {
+  const [backendData, setbackendData] = useState([{}]);
+    
   // WIP
   const bookUser = async (e) => {
     e.preventDefault();
@@ -29,6 +29,7 @@ export const User = () => {
 
   return (
     <div
+    
       id="gallery"
       className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10"
     >
@@ -89,4 +90,4 @@ export const User = () => {
   );
 }
 
-export default User;
+export default Users;
