@@ -9,6 +9,7 @@ import axios from "axios";
 function App() {
   const [backendData, setbackendData] = useState([{}]);
 
+  // WIP
   const bookUser = async (e) => {
     e.preventDefault();
     try {
@@ -71,14 +72,14 @@ function App() {
               {user.availability ? (
                 <button
                   onClick={bookUser}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Book Me
                 </button>
               ) : (
                 <a
                   role="button"
-                  className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                   href={`mailto:${user.email}`}
                 >
                   Send Inquiry
