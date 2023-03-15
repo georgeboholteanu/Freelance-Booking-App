@@ -5,6 +5,7 @@ import NavTabs from './components/NavTabs';
 import About from "./components/pages/About"
 import AddUser from "./components/pages/AddUser"
 import Contact from "./components/pages/Contact"
+import Filter from "./components/Filter"
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <div>
       <NavTabs />
+      <Filter />
         {/* Wrap Route elements in a Routes component */}
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
