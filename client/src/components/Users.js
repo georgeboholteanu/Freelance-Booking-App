@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Users() {
   const [backendData, setbackendData] = useState([{}]);
-    
+
   // WIP
   const bookUser = async (e) => {
     e.preventDefault();
@@ -29,7 +28,6 @@ function Users() {
 
   return (
     <div
-    
       id="gallery"
       className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10"
     >
@@ -43,7 +41,7 @@ function Users() {
           >
             <img
               className="w-full"
-              src={`${window.location.origin}${user.picture}`}
+              src={`./assets/images/${user.picture}`}
               alt="user avatar"
             />
             <div className="px-6 py-4">
