@@ -9,7 +9,7 @@ const Filter = ({ options, label }) => {
   }
 
   return (
-    <div className="w-72 font-medium h-80">
+    <div className="w-72 font-medium h-80 mt-20">
       <div
         className="bg-white w-full p-2 flex items-center justify-between rounded border"
         onClick={toggleDropdown}
@@ -31,17 +31,17 @@ const Filter = ({ options, label }) => {
 };
 
 const App = () => {
-    const cities = ["London", "Manchester", "Birmingham", "Newcastle"];
-    const skills = ["HTML", "CSS", "Javascript", "React"];
-    const availability = ["Full-time", "Part-time", "Contract", "Available", ];
+  const cities = ["London", "Manchester", "Birmingham", "Newcastle"];
+  const skills = ["HTML", "CSS", "Javascript", "React"];
+  const availability = ["Full-time", "Part-time", "Contract", "Available", ];
   
-    return (
-      <div className="flex justify-center gap-6">
-        <Filter options={cities} label="Select City" />
-        <Filter options={skills} label="Select Skills" />
-        <Filter options={availability} label="Select Availability" />
-      </div>
-    );
-  };
+  return (
+    <div className="flex justify-center gap-6">
+      <Filter options={cities} label="Select City" />
+      <Filter options={skills} label="Select Skills" />
+      <Filter options={availability} label="Select Availability" />
+    </div>
+  );
+};
 
 export default App;
