@@ -17,23 +17,28 @@ app.get("/api", (req, res) => {
   });
 });
 
-app.put("/public/:id", (req, res) => {
-  // extract the id from the parms
-  const id = req.params.id;
-
-  // extract the new value from the body
-  // {
-  //   availability: false
-  // }
-  const availability = req.body.availability;
-
-  // use array .find to get the object you want
-
-  // update there avail prop
-
-  // respond to the client
-  res.end();
+app.put("/api/test", (req, res) => {
+  const data = req.body;
+  res.status(200).send("success");
 });
+
+// app.put("/public/:id", (req, res) => {
+//   // extract the id from the parms
+//   const id = req.params.id;
+
+//   // extract the new value from the body
+//   // {
+//   //   availability: false
+//   // }
+//   const availability = req.body.availability;
+
+//   // use array .find to get the object you want
+
+//   // update there avail prop
+
+//   // respond to the client
+//   res.end();
+// });
 
 app.listen(5000, () => {
   console.log("Server Started on port 5000");

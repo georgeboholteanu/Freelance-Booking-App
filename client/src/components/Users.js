@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export const User = () => {
-
- const [backendData, setbackendData] = useState([{}]);
+function Users() {
+  const [backendData, setbackendData] = useState([{}]);
 
   // WIP
   const bookUser = async (e) => {
@@ -42,7 +41,7 @@ export const User = () => {
           >
             <img
               className="w-full"
-              src={`${window.location.origin}${user.picture}`}
+              src={`./assets/images/${user.picture}`}
               alt="user avatar"
             />
             <div className="px-6 py-4">
@@ -55,13 +54,13 @@ export const User = () => {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #Frontend
+              {user.skills[0]}
               </span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #HTML
+              {user.skills[1]}
               </span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #CSS
+              {user.skills[2]}
               </span>
 
               {/* dynamic buttons with availability */}
@@ -89,4 +88,4 @@ export const User = () => {
   );
 }
 
-export default User;
+export default Users;
