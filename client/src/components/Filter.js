@@ -30,18 +30,4 @@ const Filter = ({ options, label }) => {
   );
 };
 
-const App = () => {
-  const cities = ["London", "Manchester", "Birmingham", "Newcastle"];
-  const skills = ["HTML", "CSS", "Javascript", "React"];
-  const availability = ["Full-time", "Part-time", "Contract", "Available", ];
-  
-  return (
-    <div className="flex justify-center gap-6">
-      <Filter options={cities} label="Select City" />
-      <Filter options={skills} label="Select Skills" />
-      <Filter options={availability} label="Select Availability" />
-    </div>
-  );
-};
-
-export default App;
+export default Filter;
