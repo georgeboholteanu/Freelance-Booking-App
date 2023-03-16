@@ -9,19 +9,12 @@ import Form from "./components/pages/Form";
 import Dropdown from "./components/Filter"
 
 function App() {
-  const cities = ["London", "Manchester", "Birmingham", "Newcastle"];
-  const skills = ["HTML", "CSS", "Javascript", "React"];
-  const availability = ["Full-time", "Part-time", "Contract", "Available", ];
   
   return (
     <Router>
       <div>
       <NavTabs />
-        <div className="flex justify-center gap-6">
-          <Dropdown options={cities} label="Select City" />
-          <Dropdown options={skills} label="Select Skills" />
-          <Dropdown options={availability} label="Select Availability" />
-        </div>
+
         {/* Wrap Route elements in a Routes component */}
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
