@@ -5,15 +5,22 @@ import NavTabs from './components/NavTabs';
 import About from "./components/pages/About"
 import AddUser from "./components/pages/AddUser"
 import Contact from "./components/pages/Contact"
-import Filter from "./components/Filter"
+import Dropdown from "./components/Filter"
 
 function App() {
+  const cities = ["London", "Manchester", "Birmingham", "Newcastle"];
+  const skills = ["HTML", "CSS", "Javascript", "React"];
+  const availability = ["Full-time", "Part-time", "Contract", "Available", ];
   
   return (
     <Router>
       <div>
       <NavTabs />
-      <Filter />
+        <div className="flex justify-center gap-6">
+          <Dropdown options={cities} label="Select City" />
+          <Dropdown options={skills} label="Select Skills" />
+          <Dropdown options={availability} label="Select Availability" />
+        </div>
         {/* Wrap Route elements in a Routes component */}
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
