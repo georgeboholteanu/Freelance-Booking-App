@@ -38,7 +38,7 @@ return (
             <div className="flex items-center mt-4">
               <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Anzej" className="w-12 h-12 rounded-full mr-4" />
             <div>
-              <h3 className="text-lg font-semibold text-gray-800">Anzej</h3>
+              <h3 className="text-lg font-semibold text-gray-800">Andzej</h3>
               <p className="text-gray-700">Front-end Developer</p>
             </div>
           </div>
