@@ -16,19 +16,19 @@ function Users() {
   }, []);
 
   // write data to server
-  const bookUser = async (id) => {
-    const { data } = await axios.put(`/users/${id}`, {
-      availability: false    
-    })
+  // const bookUser = async (id) => {
+  //   const { data } = await axios.put(`/users/${id}`, {
+  //     availability: false    
+  //   })
 
-    console.log(data);
-    setbackendData((prevState) => {
-      const updatedUsers = prevState.users.map((user) =>
-        user.id === id ? { ...user, availability: false } : user
-      );
-      return { users: updatedUsers };
-    });
-  };
+  //   console.log(data);
+  //   setbackendData((prevState) => {
+  //     const updatedUsers = prevState.users.map((user) =>
+  //       user.id === id ? { ...user, availability: false } : user
+  //     );
+  //     return { users: updatedUsers };
+  //   });
+  // };
 
   return (
     <div
