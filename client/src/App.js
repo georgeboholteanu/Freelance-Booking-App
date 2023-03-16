@@ -2,10 +2,10 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import NavTabs from './components/NavTabs';
-import About from "./components/pages/About"
-import AddUser from "./components/pages/AddUser"
-import Contact from "./components/pages/Contact"
-
+import About from "./components/pages/About";
+import AddUser from "./components/pages/AddUser";
+import Contact from "./components/pages/Contact";
+import Form from "./components/pages/Form";
 
 function App() {
   
@@ -22,6 +22,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="adduser" element={<AddUser />} />
           {/* Define a route that will have descendant routes */}
+          <Route path="/form/:userId" element={<Form />} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
       </div>

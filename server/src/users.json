@@ -5,7 +5,7 @@
       "email": "terry.bryant@example.com",
       "phone": "01457 310218",
       "picture": "user1.jpg",
-      "availability": true,
+      "availability": false,
       "id": 1,
       "skills": ["Typescript", "ASP.NET", "Tailwind"]
     },
@@ -23,7 +23,7 @@
       "email": "logan.watts@example.com",
       "phone": "01417 99227",
       "picture": "user3.jpg",
-      "availability": true,
+      "availability": false,
       "id": 3,
       "skills": ["CSS", "Python", "Laravel"]
     },
@@ -50,7 +50,7 @@
       "email": "brittany.payne@example.com",
       "phone": "016974 20698",
       "picture": "user6.jpg",
-      "availability": true,
+      "availability": false,
       "id": 6,
       "skills": ["Ruby", "CSS", "Typescript"]
     },
@@ -95,7 +95,7 @@
       "email": "mathew.frazier@example.com",
       "phone": "028 4775 7947",
       "picture": "user11.jpg",
-      "availability": true,
+      "availability": false,
       "id": 11,
       "skills": ["Tailwind", "ASP.NET", "ExpressJS"]
     },
@@ -140,7 +140,7 @@
       "email": "rosalyn.moore@example.com",
       "phone": "01968 393011",
       "picture": "user16.jpg",
-      "availability": true,
+      "availability": false,
       "id": 16,
       "skills": ["Bootstrap", "Flask", "CSS"]
     },
