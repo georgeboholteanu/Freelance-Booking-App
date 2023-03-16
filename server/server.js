@@ -39,8 +39,24 @@ app.put("/users/:id", (req, res) => {
   });
 });
 
+// Define a route for adding a new user
+app.post("/adduser", async (req, res) => {
+  // Extract the user data from the request body
+  const newUser = req.body
+
+  // Write the new user to the database
+  await fs.writeFile("./src/users.json", JSON.stringify(newUser), (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Error adding user");
+    }
+    res.send("User added successfully");
+  });
+
+  // Send a response indicating that the user was added successfully
+  // res.status(201).json({ message: 'User added successfully' });
+});
+
 app.listen(port, () => {
   console.log(`Server Started on port ${port}`);
 });
-
-
