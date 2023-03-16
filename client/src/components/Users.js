@@ -3,29 +3,32 @@ import { NavLink } from 'react-router-dom';
 import axios from "axios";
 
 function Users() {
-  const [backendData, setbackendData] = useState([{}]);
+  const [backendData, setbackendData] = useState({ users: [] });
 
-  // WIP
-  const bookUser = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.put(`/api/${backendData.users.id}`, {
-        availability: backendData.users.availability,
-      });
-      console.log(response.backendData.users);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  // get data from the server
   const fetchData = async () => {
-    const { data } = await axios.get("/api");
+    const { data } = await axios.get("/users");
     console.log(data);
     setbackendData(data);
   };
   useEffect(() => {
     fetchData();
   }, []);
+
+  // write data to server
+  const bookUser = async (id) => {
+    const { data } = await axios.put(`/users/${id}`, {
+      availability: false    
+    })
+
+    console.log(data);
+    setbackendData((prevState) => {
+      const updatedUsers = prevState.users.map((user) =>
+        user.id === id ? { ...user, availability: false } : user
+      );
+      return { users: updatedUsers };
+    });
+  };
 
   return (
     <div
