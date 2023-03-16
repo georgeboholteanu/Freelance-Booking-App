@@ -5,7 +5,7 @@ import NavTabs from './components/NavTabs';
 import About from "./components/pages/About";
 import AddUser from "./components/pages/AddUser";
 import Contact from "./components/pages/Contact";
-import Form from "./components/Form";
+import Form from "./components/pages/Form";
 import Dropdown from "./components/Filter"
 
 function App() {
