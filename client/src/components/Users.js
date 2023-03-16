@@ -34,7 +34,7 @@ function Users() {
       id="gallery"
       className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10"
     >
-      {backendData.length > 0 ? (
+      {backendData.length === 0 ? (
         <p>Loading...</p>
       ) : (
         backendData.users.map((user) => (
