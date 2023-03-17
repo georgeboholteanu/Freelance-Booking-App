@@ -7,11 +7,8 @@ function AddUser() {
     surname: "",
     phone: "",
     availability: false,
-    skills: {
-      skill1: "",
-      skill2: "",
-      skill3: "",
-    },
+    skills: [],
+    id: ""
   });
 
   const handleInputChange = (e) => {
@@ -30,24 +27,40 @@ function AddUser() {
     }));
   };
 
-  const handleSkillChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      skills: {
-        ...prevState.skills,
-        [name]: value,
-      },
+  const handleSectionChange = (event) => {
+    // const { value } = event.target;
+    const selectedOptions = Array.from(
+      event.target.selectedOptions,
+      (option) => option.value
+    );
+    setFormData((prevData) => ({
+      ...prevData,
+      skills: selectedOptions,
     }));
   };
 
+  const generateNewId = async () => {
+    //get existing data and merge it with the formData
+    const { data } = await axios.get("/users");
+    const newId = data.users.length + 1;
+    console.log(newId);
+    return newId;
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    //get existing data and merge it with the formData
+    const { data } = await axios.get("/users");
+    const updatedData = data.users;
+    // add an ID to each new user
+    formData["id"] = generateNewId();
+    
+    updatedData.push(formData);
+    console.log(updatedData)
 
     axios
-      .post("/adduser", {formData})
+      .post("/adduser", { users: updatedData })
       .then((response) => {
         // User was added successfully
         console.log("User added successfully1");
@@ -58,6 +71,27 @@ function AddUser() {
       });
   };
 
+  const technologies = [
+    "HTML",
+    "CSS",
+    "React",
+    "Javascript",
+    "NodeJS",
+    "ExpressJS",
+    "Tailwind",
+    "Bootstrap",
+    "Typescript",
+    "Python",
+    "C++",
+    "CSharp",
+    "MongoDB",
+    "Django",
+    "Flask",
+    "ASP.NET",
+    "Laravel",
+    "Ruby",
+    "SQL",
+  ];
 
   return (
     <div>
@@ -120,18 +154,25 @@ function AddUser() {
         </div>
         <div className="mb-4">
           <label htmlFor="skill1" className="block mb-2 text-gray-700">
-            Best Skill 1
+            Skills
           </label>
-          <input
+          <select
             type="text"
             name="skill1"
             id="skill1"
-            value={formData.skills.skill1}
-            onChange={handleSkillChange}
+            multiple={true}
+            onChange={handleSectionChange}
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
-          />
+          >            
+            {technologies.map((tech, idx) => (
+              <option key={idx} value={tech}>
+                {tech}
+              </option>
+            ))}
+          </select>
         </div>
+
         <button
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -139,13 +180,6 @@ function AddUser() {
           Add New User
         </button>
       </form>
-
-      {/* <button 
-      onClick={() => postUser(usr)}
-      className="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-      >
-        Book2
-      </button> */}
     </div>
   );
 }
