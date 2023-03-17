@@ -7,9 +7,8 @@ function NavTabs() {
       <li className="mr-1">
         <NavLink
               to="/"
-              
+              onClick={() => window.reload()}
               className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold"
-              
             >
         Home
         </NavLink>
@@ -29,7 +28,7 @@ function NavTabs() {
               className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold"
               
             >
-        Add User
+        Add Freelancer
         </NavLink>
       </li>
       <li className="mr-1">

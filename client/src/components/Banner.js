@@ -1,25 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import About from "./pages/About";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Banner() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  function handleHireNowClick() {
+    setIsVisible(false);
+  }
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <div>
-      Pariatur nisi laboris ex eu cupidatat officia adipisicing pariatur. In
-      laboris mollit non sit sit. Ex velit commodo quis ad consectetur cupidatat
-      ipsum ex sunt. Id nisi reprehenderit irure tempor eiusmod reprehenderit
-      aute Lorem ullamco dolore nisi officia. Adipisicing adipisicing
-      adipisicing enim do voluptate culpa anim quis culpa occaecat.
-      Reprehenderit cupidatat aliqua incididunt irure magna aliqua labore amet
-      aliquip. Sint aliqua consequat nostrud minim ut tempor tempor. Sunt culpa
-      magna commodo labore ipsum. Laboris sint cupidatat veniam dolore sint
-      mollit in proident. Amet ut velit minim nostrud adipisicing nisi tempor
-      nisi. Esse ullamco excepteur est nostrud aute excepteur deserunt proident
-      aute est incididunt culpa commodo. Aliqua elit ut qui elit laborum nostrud
-      labore sit ex aliqua velit occaecat ut velit. Amet excepteur fugiat sunt
-      aliqua. Dolore excepteur eiusmod ipsum non minim consectetur adipisicing
-      consequat adipisicing excepteur Lorem irure dolor. Dolor voluptate dolor
-      et culpa occaecat velit eiusmod consequat nostrud occaecat. Veniam Lorem
-      adipisicing ad amet nisi Lorem do officia.
-    </div>
+    <section class="bg-gray-50">
+      <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+        <div class="mx-auto max-w-xl text-center">
+          <h1 class="text-3xl font-extrabold sm:text-5xl">
+            Support Freelancers
+            <strong class="font-extrabold text-red-700 sm:block">
+              Increase productivity
+            </strong>
+          </h1>
+
+          <p class="mt-4 sm:text-xl sm:leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+            tenetur fuga ducimus numquam ea!
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <button
+              class="block w-full rounded px-12 py-3 text-sm font-medium text-white bg-red-600 shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+              onClick={handleHireNowClick}
+            >
+              Hire now!
+            </button>
+
+            <a
+              class="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+              href="./about"
+            >
+              About
+              <NavLink
+                to="./about"
+                className=""
+                activeClassName="border-b-2 font-semibold text-gray-800"
+              ></NavLink>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
