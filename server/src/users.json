@@ -1,7 +1,8 @@
 {
   "users": [
     {
-      "name": { "title": "Mr", "first": "Terry", "last": "Bryant" },
+      "name": "Terry",
+      "surname": "Bryant",
       "email": "terry.bryant@example.com",
       "phone": "01457 310218",
       "picture": "user1.jpg",
@@ -10,7 +11,8 @@
       "skills": ["Typescript", "ASP.NET", "Tailwind"]
     },
     {
-      "name": { "title": "Mr", "first": "Ronnie", "last": "Jensen" },
+      "name": "Ronnie",
+      "surname": "Jensen",
       "email": "ronnie.jensen@example.com",
       "phone": "0117732 370 7838",
       "picture": "user2.jpg",
@@ -19,7 +21,8 @@
       "skills": ["Flask", "Laravel", "MongoDB"]
     },
     {
-      "name": { "title": "Mr", "first": "Logan", "last": "Watts" },
+      "name": "Logan",
+      "surname": "Watts",
       "email": "logan.watts@example.com",
       "phone": "01417 99227",
       "picture": "user3.jpg",
@@ -28,7 +31,8 @@
       "skills": ["CSS", "Python", "Laravel"]
     },
     {
-      "name": { "title": "Mrs", "first": "Amber", "last": "Stanley" },
+      "name": "Amber",
+      "surname": "Stanley",
       "email": "amber.stanley@example.com",
       "phone": "015395 61712",
       "picture": "user4.jpg",
@@ -37,7 +41,8 @@
       "skills": ["Tailwind", "Flask", "HTML"]
     },
     {
-      "name": { "title": "Mr", "first": "David", "last": "Carlson" },
+      "name": "David",
+      "surname": "Carlson",
       "email": "david.carlson@example.com",
       "phone": "019467 93270",
       "picture": "user5.jpg",
@@ -46,7 +51,8 @@
       "skills": ["Bootstrap", "ASP.NET", "NodeJS"]
     },
     {
-      "name": { "title": "Miss", "first": "Brittany", "last": "Payne" },
+      "name": "Brittany",
+      "surname": "Payne",
       "email": "brittany.payne@example.com",
       "phone": "016974 20698",
       "picture": "user6.jpg",
@@ -55,7 +61,8 @@
       "skills": ["Ruby", "CSS", "Typescript"]
     },
     {
-      "name": { "title": "Mrs", "first": "Amanda", "last": "Fleming" },
+      "name": "Amanda",
+      "surname": "Fleming",
       "email": "amanda.fleming@example.com",
       "phone": "01302 35441",
       "picture": "user7.jpg",
@@ -64,7 +71,8 @@
       "skills": ["Laravel", "Ruby", "ASP.NET"]
     },
     {
-      "name": { "title": "Mrs", "first": "Alexandra", "last": "Reed" },
+      "name": "Alexandra",
+      "surname": "Reed",
       "email": "alexandra.reed@example.com",
       "phone": "0118687 300 1473",
       "picture": "user8.jpg",
@@ -73,7 +81,8 @@
       "skills": ["HTML", "Javascript", "MongoDB"]
     },
     {
-      "name": { "title": "Ms", "first": "Brooke", "last": "Fox" },
+      "name": "Brooke",
+      "surname": "Fox",
       "email": "brooke.fox@example.com",
       "phone": "017683 56091",
       "picture": "user9.jpg",
@@ -82,7 +91,8 @@
       "skills": ["MongoDB", "NodeJS", "C++"]
     },
     {
-      "name": { "title": "Mr", "first": "Juan", "last": "Mccoy" },
+      "name": "Juan",
+      "surname": "Mccoy",
       "email": "juan.mccoy@example.com",
       "phone": "019467 88379",
       "picture": "user10.jpg",
@@ -91,7 +101,8 @@
       "skills": ["NodeJS", "Python", "CSharp"]
     },
     {
-      "name": { "title": "Mr", "first": "Mathew", "last": "Frazier" },
+      "name": "Mathew",
+      "surname": "Frazier",
       "email": "mathew.frazier@example.com",
       "phone": "028 4775 7947",
       "picture": "user11.jpg",
@@ -100,7 +111,8 @@
       "skills": ["Tailwind", "ASP.NET", "ExpressJS"]
     },
     {
-      "name": { "title": "Mr", "first": "Alan", "last": "Grant" },
+      "name": "Alan",
+      "surname": "Grant",
       "email": "alan.grant@example.com",
       "phone": "019467 11195",
       "picture": "user12.jpg",
@@ -109,7 +121,8 @@
       "skills": ["NodeJS", "ExpressJS", "Bootstrap"]
     },
     {
-      "name": { "title": "Mr", "first": "Luke", "last": "Burke" },
+      "name": "Luke",
+      "surname": "Burke",
       "email": "luke.burke@example.com",
       "phone": "021 1669 3057",
       "picture": "user13.jpg",
@@ -118,7 +131,8 @@
       "skills": ["CSharp", "Laravel", "ExpressJS"]
     },
     {
-      "name": { "title": "Mr", "first": "Fred", "last": "Murray" },
+      "name": "Fred",
+      "surname": "Murray",
       "email": "fred.murray@example.com",
       "phone": "017687 16636",
       "picture": "user14.jpg",
@@ -127,7 +141,8 @@
       "skills": ["React", "MongoDB", "SQL"]
     },
     {
-      "name": { "title": "Mr", "first": "Bill", "last": "Snyder" },
+      "name": "Bill",
+      "surname": "Snyder",
       "email": "bill.snyder@example.com",
       "phone": "0151 699 3545",
       "picture": "user15.jpg",
@@ -136,7 +151,8 @@
       "skills": ["ASP.NET", "CSS", "Python"]
     },
     {
-      "name": { "title": "Ms", "first": "Rosalyn", "last": "Moore" },
+      "name": "Rosalyn",
+      "surname": "Moore",
       "email": "rosalyn.moore@example.com",
       "phone": "01968 393011",
       "picture": "user16.jpg",
@@ -145,7 +161,8 @@
       "skills": ["Bootstrap", "Flask", "CSS"]
     },
     {
-      "name": { "title": "Mr", "first": "Allen", "last": "Rodriguez" },
+      "name": "Allen",
+      "surname": "Rodriguez",
       "email": "allen.rodriguez@example.com",
       "phone": "017683 82603",
       "picture": "user17.jpg",
@@ -154,7 +171,8 @@
       "skills": ["Python", "CSS", "HTML"]
     },
     {
-      "name": { "title": "Miss", "first": "Suzanna", "last": "Foster" },
+      "name": "Suzanna",
+      "surname": "Foster",
       "email": "suzanna.foster@example.com",
       "phone": "0110765 479 5076",
       "picture": "user18.jpg",
@@ -163,7 +181,8 @@
       "skills": ["Tailwind", "HTML", "Flask"]
     },
     {
-      "name": { "title": "Ms", "first": "Caroline", "last": "Tucker" },
+      "name": "Caroline",
+      "surname": "Tucker",
       "email": "caroline.tucker@example.com",
       "phone": "016977 8043",
       "picture": "user19.jpg",
@@ -172,7 +191,8 @@
       "skills": ["ASP.NET", "Ruby", "ExpressJS"]
     },
     {
-      "name": { "title": "Mrs", "first": "Kim", "last": "Rose" },
+      "name": "Kim",
+      "surname": "Rose",
       "email": "kim.rose@example.com",
       "phone": "029 5858 9066",
       "picture": "user20.jpg",
@@ -181,7 +201,8 @@
       "skills": ["Python", "MongoDB", "CSS"]
     },
     {
-      "name": { "title": "Miss", "first": "Rebecca", "last": "Romero" },
+      "name": "Rebecca",
+      "surname": "Romero",
       "email": "rebecca.romero@example.com",
       "phone": "0111 815 5870",
       "picture": "user21.jpg",
@@ -190,7 +211,8 @@
       "skills": ["Typescript", "Ruby", "SQL"]
     },
     {
-      "name": { "title": "Mr", "first": "Jacob", "last": "Fletcher" },
+      "name": "Jacob",
+      "surname": "Fletcher",
       "email": "jacob.fletcher@example.com",
       "phone": "016977 78191",
       "picture": "user22.jpg",
@@ -199,7 +221,8 @@
       "skills": ["CSS", "Typescript", "Javascript"]
     },
     {
-      "name": { "title": "Miss", "first": "Ella", "last": "Thompson" },
+      "name": "Ella",
+      "surname": "Thompson",
       "email": "ella.thompson@example.com",
       "phone": "016977 86195",
       "picture": "user23.jpg",
@@ -208,7 +231,8 @@
       "skills": ["React", "Flask", "Typescript"]
     },
     {
-      "name": { "title": "Mr", "first": "Alan", "last": "Mitchell" },
+      "name": "Alan",
+      "surname": "Mitchell",
       "email": "alan.mitchell@example.com",
       "phone": "015394 79409",
       "picture": "user24.jpg",
@@ -217,7 +241,8 @@
       "skills": ["Javascript", "CSharp", "NodeJS"]
     },
     {
-      "name": { "title": "Miss", "first": "Jenny", "last": "Green" },
+      "name": "Jenny",
+      "surname": "Green",
       "email": "jenny.green@example.com",
       "phone": "01551 72652",
       "picture": "user25.jpg",
@@ -226,7 +251,8 @@
       "skills": ["Flask", "ExpressJS", "Python"]
     },
     {
-      "name": { "title": "Miss", "first": "Vanessa", "last": "Lambert" },
+      "name": "Vanessa",
+      "surname": "Lambert",
       "email": "vanessa.lambert@example.com",
       "phone": "0116919 447 7633",
       "picture": "user26.jpg",
@@ -235,7 +261,8 @@
       "skills": ["MongoDB", "Flask", "Typescript"]
     },
     {
-      "name": { "title": "Mr", "first": "Leroy", "last": "Lynch" },
+      "name": "Leroy",
+      "surname": "Lynch",
       "email": "leroy.lynch@example.com",
       "phone": "019467 01579",
       "picture": "user27.jpg",
@@ -244,7 +271,8 @@
       "skills": ["Flask", "React", "Ruby"]
     },
     {
-      "name": { "title": "Mr", "first": "Ricky", "last": "Washington" },
+      "name": "Ricky",
+      "surname": "Washington",
       "email": "ricky.washington@example.com",
       "phone": "016974 72567",
       "picture": "user28.jpg",
@@ -253,7 +281,8 @@
       "skills": ["Ruby", "Laravel", "Typescript"]
     },
     {
-      "name": { "title": "Mrs", "first": "Linda", "last": "Hunt" },
+      "name": "Linda",
+      "surname": "Hunt",
       "email": "linda.hunt@example.com",
       "phone": "019467 24965",
       "picture": "user29.jpg",
@@ -262,7 +291,8 @@
       "skills": ["Laravel", "Typescript", "HTML"]
     },
     {
-      "name": { "title": "Miss", "first": "Emily", "last": "Stevens" },
+      "name": "Emily",
+      "surname": "Stevens",
       "email": "emily.stevens@example.com",
       "phone": "020 4031 0249",
       "picture": "user30.jpg",

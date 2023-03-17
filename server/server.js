@@ -18,6 +18,11 @@ app.get("/users", (req, res) => {
   });
 });
 
+// Get user by skill
+app.get("/users", (req, res) => {
+  
+})
+
 // Update a user's availability
 app.put("/users/:id", (req, res) => {
   const userId = req.params.id;
