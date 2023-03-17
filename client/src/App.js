@@ -6,6 +6,8 @@ import About from "./components/pages/About";
 import AddUser from "./components/pages/AddUser";
 import Contact from "./components/pages/Contact";
 import Form from "./components/pages/Form";
+import Banner from "./components/Banner"
+import Users from "./components/Users";
 
 function App() {
   
@@ -18,11 +20,12 @@ function App() {
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Banner />} />
+          <Route path="users" element={<Users />} />
+          <Route path="banner" element={<Banner />} />
           <Route path="about" element={<About />} />
           <Route path="adduser" element={<AddUser />} />
           {/* Define a route that will have descendant routes */}
-          <Route path="/form/:userId" element={<Form />} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
       </div>

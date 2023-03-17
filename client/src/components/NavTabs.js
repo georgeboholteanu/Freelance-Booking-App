@@ -7,11 +7,21 @@ function NavTabs() {
       <li className="mr-1">
         <NavLink
               to="/"
-              
+              exact
               className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold"
-              
+              activeClassName="border-b-2 font-semibold text-gray-800"
             >
         Home
+        </NavLink>
+      </li>
+      <li className="mr-1">
+      <NavLink
+              to="./Users"
+              exact
+              className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold"
+              activeClassName="border-b-2 font-semibold text-gray-800"
+            >
+        Hire
         </NavLink>
       </li>
       <li className="mr-1">
