@@ -38,7 +38,7 @@ function Banner() {
     >
       Hire now!
       <NavLink
-          to="./"
+          to="users"
           className=""
           activeClassName="border-b-2 font-semibold text-gray-800"
       > 
