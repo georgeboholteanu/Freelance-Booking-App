@@ -4,7 +4,6 @@ import axios from "axios";
 
 function Users() {
   const [backendData, setbackendData] = useState({ users: [] });
-
   // get data from the server
   const fetchData = async () => {
     const { data } = await axios.get("/users");
