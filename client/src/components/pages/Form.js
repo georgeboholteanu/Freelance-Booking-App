@@ -188,12 +188,7 @@ const Form = () => {
         >
             Book
         </button>
-        {/* <button 
-        onClick={newUser}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-            Book2
-        </button> */}
+
         </form>
         </div>
     )
@@ -201,9 +196,3 @@ const Form = () => {
 
 export default Form;
 
-// find the user (boject.id)
-// replace user availability
-
-
-// get fetch function from the users
-// the book user function
