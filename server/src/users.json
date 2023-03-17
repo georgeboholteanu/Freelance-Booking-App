@@ -5,7 +5,7 @@
       "email": "terry.bryant@example.com",
       "phone": "01457 310218",
       "picture": "user1.jpg",
-      "availability": false,
+      "availability": true,
       "id": 1,
       "skills": ["Typescript", "ASP.NET", "Tailwind"]
     },
@@ -14,7 +14,7 @@
       "email": "ronnie.jensen@example.com",
       "phone": "0117732 370 7838",
       "picture": "user2.jpg",
-      "availability": false,
+      "availability": true,
       "id": 2,
       "skills": ["Flask", "Laravel", "MongoDB"]
     },
@@ -23,7 +23,7 @@
       "email": "logan.watts@example.com",
       "phone": "01417 99227",
       "picture": "user3.jpg",
-      "availability": false,
+      "availability": true,
       "id": 3,
       "skills": ["CSS", "Python", "Laravel"]
     },
@@ -32,7 +32,7 @@
       "email": "amber.stanley@example.com",
       "phone": "015395 61712",
       "picture": "user4.jpg",
-      "availability": false,
+      "availability": true,
       "id": 4,
       "skills": ["Tailwind", "Flask", "HTML"]
     },
@@ -41,7 +41,7 @@
       "email": "david.carlson@example.com",
       "phone": "019467 93270",
       "picture": "user5.jpg",
-      "availability": false,
+      "availability": true,
       "id": 5,
       "skills": ["Bootstrap", "ASP.NET", "NodeJS"]
     },
@@ -50,7 +50,7 @@
       "email": "brittany.payne@example.com",
       "phone": "016974 20698",
       "picture": "user6.jpg",
-      "availability": false,
+      "availability": true,
       "id": 6,
       "skills": ["Ruby", "CSS", "Typescript"]
     },
@@ -59,7 +59,7 @@
       "email": "amanda.fleming@example.com",
       "phone": "01302 35441",
       "picture": "user7.jpg",
-      "availability": false,
+      "availability": true,
       "id": 7,
       "skills": ["Laravel", "Ruby", "ASP.NET"]
     },
@@ -68,7 +68,7 @@
       "email": "alexandra.reed@example.com",
       "phone": "0118687 300 1473",
       "picture": "user8.jpg",
-      "availability": false,
+      "availability": true,
       "id": 8,
       "skills": ["HTML", "Javascript", "MongoDB"]
     },
@@ -77,7 +77,7 @@
       "email": "brooke.fox@example.com",
       "phone": "017683 56091",
       "picture": "user9.jpg",
-      "availability": false,
+      "availability": true,
       "id": 9,
       "skills": ["MongoDB", "NodeJS", "C++"]
     },
@@ -86,7 +86,7 @@
       "email": "juan.mccoy@example.com",
       "phone": "019467 88379",
       "picture": "user10.jpg",
-      "availability": false,
+      "availability": true,
       "id": 10,
       "skills": ["NodeJS", "Python", "CSharp"]
     },
@@ -95,7 +95,7 @@
       "email": "mathew.frazier@example.com",
       "phone": "028 4775 7947",
       "picture": "user11.jpg",
-      "availability": false,
+      "availability": true,
       "id": 11,
       "skills": ["Tailwind", "ASP.NET", "ExpressJS"]
     },
@@ -104,7 +104,7 @@
       "email": "alan.grant@example.com",
       "phone": "019467 11195",
       "picture": "user12.jpg",
-      "availability": false,
+      "availability": true,
       "id": 12,
       "skills": ["NodeJS", "ExpressJS", "Bootstrap"]
     },
@@ -113,7 +113,7 @@
       "email": "luke.burke@example.com",
       "phone": "021 1669 3057",
       "picture": "user13.jpg",
-      "availability": false,
+      "availability": true,
       "id": 13,
       "skills": ["CSharp", "Laravel", "ExpressJS"]
     },
@@ -122,7 +122,7 @@
       "email": "fred.murray@example.com",
       "phone": "017687 16636",
       "picture": "user14.jpg",
-      "availability": false,
+      "availability": true,
       "id": 14,
       "skills": ["React", "MongoDB", "SQL"]
     },
@@ -131,7 +131,7 @@
       "email": "bill.snyder@example.com",
       "phone": "0151 699 3545",
       "picture": "user15.jpg",
-      "availability": false,
+      "availability": true,
       "id": 15,
       "skills": ["ASP.NET", "CSS", "Python"]
     },
@@ -140,7 +140,7 @@
       "email": "rosalyn.moore@example.com",
       "phone": "01968 393011",
       "picture": "user16.jpg",
-      "availability": false,
+      "availability": true,
       "id": 16,
       "skills": ["Bootstrap", "Flask", "CSS"]
     },
@@ -158,7 +158,7 @@
       "email": "suzanna.foster@example.com",
       "phone": "0110765 479 5076",
       "picture": "user18.jpg",
-      "availability": false,
+      "availability": true,
       "id": 18,
       "skills": ["Tailwind", "HTML", "Flask"]
     },
@@ -167,7 +167,7 @@
       "email": "caroline.tucker@example.com",
       "phone": "016977 8043",
       "picture": "user19.jpg",
-      "availability": false,
+      "availability": true,
       "id": 19,
       "skills": ["ASP.NET", "Ruby", "ExpressJS"]
     },
@@ -221,7 +221,7 @@
       "email": "jenny.green@example.com",
       "phone": "01551 72652",
       "picture": "user25.jpg",
-      "availability": false,
+      "availability": true,
       "id": 25,
       "skills": ["Flask", "ExpressJS", "Python"]
     },
@@ -230,7 +230,7 @@
       "email": "vanessa.lambert@example.com",
       "phone": "0116919 447 7633",
       "picture": "user26.jpg",
-      "availability": false,
+      "availability": true,
       "id": 26,
       "skills": ["MongoDB", "Flask", "Typescript"]
     },
@@ -257,7 +257,7 @@
       "email": "linda.hunt@example.com",
       "phone": "019467 24965",
       "picture": "user29.jpg",
-      "availability": false,
+      "availability": true,
       "id": 29,
       "skills": ["Laravel", "Typescript", "HTML"]
     },
@@ -266,7 +266,7 @@
       "email": "emily.stevens@example.com",
       "phone": "020 4031 0249",
       "picture": "user30.jpg",
-      "availability": false,
+      "availability": true,
       "id": 30,
       "skills": ["HTML", "React", "Javascript"]
     }
