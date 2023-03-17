@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Banner from "../Banner";
 
 // import { BrowserRouter as Router, Route, Routes, Navlink  } from 'react-router-dom';
 // import { Nav } from "./components/Nav";

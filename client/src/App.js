@@ -7,6 +7,7 @@ import NavTabs from './components/NavTabs';
 import About from "./components/pages/About"
 import AddUser from "./components/pages/AddUser"
 import Contact from "./components/pages/Contact"
+import Banner from "./components/Banner"
 
 
 // import { BrowserRouter as Router, Route, Routes, Navlink  } from 'react-router-dom';
@@ -24,6 +25,7 @@ function App() {
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
           <Route path="/" element={<User />} />
+          <Route path="banner" element={<Banner />} />
           <Route path="about" element={<About />} />
           <Route path="adduser" element={<AddUser />} />
           {/* Define a route that will have descendant routes */}
