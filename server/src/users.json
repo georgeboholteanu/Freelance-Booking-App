@@ -269,22 +269,6 @@
       "availability": true,
       "id": 30,
       "skills": ["HTML", "React", "Javascript"]
-    },
-    {
-      "name": "333",
-      "surname": "333",
-      "phone": "333",
-      "availability": true,
-      "skills": ["CSS"],
-      "id": {}
-    },
-    {
-      "name": "22",
-      "surname": "22",
-      "phone": "22",
-      "availability": true,
-      "skills": ["HTML"],
-      "id": {}
     }
   ]
 }
