@@ -1,9 +1,11 @@
-# Freelancer Booking App
+# Freelance Booking App
 
 ## Description
 This Single Page Application is a convenient platform for browsing and hiring a diverse range of freelancers. Users can easily check the availability of freelancers and send them enquiries via a simple form if they are currently booked. The website also features useful filters for refining search results, such as by location, skills, and work type (e.g. full time, part time, contract).
 
 Built using React.js, Node, Tailwind and Express, this website aims to make it easier for individuals and businesses to find and hire freelancers for various purposes, such as personal projects, company migration, training opportunities, and collaborative work. With its user-friendly interface and powerful search capabilities, the website offers a streamlined and efficient way to connect with talented professionals and get projects done.
+
+Additionally, freelancers can add themselves to the portfolio of available freelancers by filling out a basic form in the "Add User" section.
 
 Minimum viable product:
 * Navigation bar
@@ -13,10 +15,6 @@ Minimum viable product:
 * Ability to see availability of given Freelancers
 * Ability to book Freelancers
 * Ability to complete a form if a freelancers is unavailable
-
-
-## Usage
-
 
 
 ## Installation instructions
