@@ -1,9 +1,9 @@
-# Freelance Booking App
+# Freelancer Booking App
 
 ## Description
 This Single Page Application is a convenient platform for browsing and hiring a diverse range of freelancers. Users can easily check the availability of freelancers and send them enquiries via a simple form if they are currently booked. The website also features useful filters for refining search results, such as by location, skills, and work type (e.g. full time, part time, contract).
 
-Built on Tailwind and Express, this website aims to make it easier for individuals and businesses to find and hire freelancers for various purposes, such as personal projects, company migration, training opportunities, and collaborative work. With its user-friendly interface and powerful search capabilities, the website offers a streamlined and efficient way to connect with talented professionals and get projects done.
+Built using React.js, Node, Tailwind and Express, this website aims to make it easier for individuals and businesses to find and hire freelancers for various purposes, such as personal projects, company migration, training opportunities, and collaborative work. With its user-friendly interface and powerful search capabilities, the website offers a streamlined and efficient way to connect with talented professionals and get projects done.
 
 Minimum viable product:
 * Navigation bar
@@ -36,6 +36,7 @@ npm start
 The website should preview on the default browser: localhost:3000
 
 Frameworks used:
+
 ![Badge Name](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Badge Name](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Badge Name](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -43,10 +44,10 @@ Frameworks used:
 ![Badge Name](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Badge Name](https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white)
 
-![Badge Name](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![Badge Name](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) 
-![Badge Name](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)
-![Badge Name](https://img.shields.io/badge/Netlify-00C7B7.svg?style=for-the-badge&logo=Netlify&logoColor=white)
+https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white
+https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white 
+https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white
+https://img.shields.io/badge/Netlify-00C7B7.svg?style=for-the-badge&logo=Netlify&logoColor=white
 
 ## Screenshot
 Initial Wireframe design:
