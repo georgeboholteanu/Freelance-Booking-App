@@ -53,6 +53,7 @@ Initial Wireframe design:
 
 
 Colour and Style Inspiration:
+
 ![Screenshot-of-design-inspiration](/Freelance-Booking-App/client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-banner-byIzraTech.png)
 
 
