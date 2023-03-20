@@ -32,7 +32,7 @@ function Footer() {
             <a href="https://github.com/DavidHJolley" className="mr-4"><RiGithubFill size={24} color="#C53030" /></a>
             <a href="https://github.com/TahminaHannan"><RiGithubFill size={24} color="#C53030" /></a>
           </div>
-          <p className="font-semibold text-center">&copy; {new Date().getFullYear()} Company Name. All rights reserved.</p>
+          <p className="font-semibold text-center">&copy; {new Date().getFullYear()} Copyright. All rights reserved.</p>
         </div>
       </div>
     </footer>
