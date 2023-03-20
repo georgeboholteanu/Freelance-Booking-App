@@ -9,26 +9,39 @@ const app = express();
 
 app.use(express.json()); // Add this line to parse JSON requests
 
-// Get all users
-// app.get("/users", (req, res) => {
-//   res.json({
-//     users: data.users,
-//   });
-// });
-
 // GET /users endpoint
 app.get("/users", (req, res) => {
   // Get the value of the 'skill' query parameter, if any
-  const skill = req.query.skill;
+  const { skill } = req.query;
 
   // If 'skill' is provided, filter users by their skills
   let filteredUsers = data.users;
+
+  // if (location) {
+  //   filteredUsers = data.users.filter((user) => user.location.includes(loc));
+  //   // Return the filtered users as JSON
+  //   res.json({ users: filteredUsers });
+  // } else {
+  //   res.json({ users: data.users });
+  // }
+
   if (skill) {
-    filteredUsers = data.users.filter(user => user.skills.includes(skill));
+    filteredUsers = data.users.filter((user) => user.skills.includes(skill));
+    // Return the filtered users as JSON
+    res.json({ users: filteredUsers });
+  } else {
+    res.json({ users: data.users });
   }
 
-  // Return the filtered users as JSON
-  res.json({ users: filteredUsers });
+  // if (avb) {
+  //   filteredUsers = data.users.filter(
+  //     (user) => user.availability == avb
+  //   );
+  //   // Return the filtered users as JSON
+  //   res.json({ users: filteredUsers });
+  // } else {
+  //   res.json({ users: data.users });
+  // }
 });
 
 // Update a user's availability
@@ -55,7 +68,7 @@ app.put("/users/:id", (req, res) => {
 // Define a route for adding a new user
 app.post("/adduser", async (req, res) => {
   // Extract the user data from the request body
-  const newUser = req.body
+  const newUser = req.body;
 
   // Write the new user to the database
   await fs.writeFile("./src/users.json", JSON.stringify(newUser), (err) => {

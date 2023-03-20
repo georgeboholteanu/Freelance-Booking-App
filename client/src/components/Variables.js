@@ -29,6 +29,6 @@ const technologies = [
   "Ruby",
   "SQL",
 ];
-const availability = ["Available", "Not Available"];
+const availability = ["Available", "Busy"];
 
 export { locations, technologies, availability };
