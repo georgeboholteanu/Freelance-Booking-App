@@ -4,24 +4,32 @@
 const data = require("./src/users.json");
 const express = require("express");
 const fs = require("fs");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json()); // Add this line to parse JSON requests
 
-app.get("/", (req, res) => res.send("Helloooo"));
-
 // Get all users
-app.get("/users", (req, res) => {
-  res.json({
-    users: data.users,
-  });
-});
+// app.get("/users", (req, res) => {
+//   res.json({
+//     users: data.users,
+//   });
+// });
 
-// Get user by skill
+// GET /users endpoint
 app.get("/users", (req, res) => {
-  
-})
+  // Get the value of the 'skill' query parameter, if any
+  const skill = req.query.skill;
+
+  // If 'skill' is provided, filter users by their skills
+  let filteredUsers = data.users;
+  if (skill) {
+    filteredUsers = data.users.filter(user => user.skills.includes(skill));
+  }
+
+  // Return the filtered users as JSON
+  res.json({ users: filteredUsers });
+});
 
 // Update a user's availability
 app.put("/users/:id", (req, res) => {

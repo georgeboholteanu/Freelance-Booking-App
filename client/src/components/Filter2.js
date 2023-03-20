@@ -1,89 +1,158 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { technologies, locations, availability } from "./Variables";
 
 function FilterData() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "React",
-    "Javascript",
-    "NodeJS",
-    "ExpressJS",
-    "Tailwind",
-    "Bootstrap",
-    "Typescript",
-    "Python",
-    "C++",
-    "CSharp",
-    "MongoDB",
-    "Django",
-    "Flask",
-    "ASP.NET",
-    "Laravel",
-    "Ruby",
-    "SQL",
-  ];
+  const [users, setUsers] = useState([]);
 
-  const filterByTag = async (tag) => {
-    const { data } = await axios.get("/users/:skill");
+  const [skill, setSkill] = useState("");
+  const [location, setLocation] = useState("");
+  const [avb, setAvb] = useState("");
+
+  const [isOpenLocation, setIsOpenLocation] = useState(false);
+  const [isOpenTechnologies, setIsOpenTechnologies] = useState(false);
+  const [isOpenAvailability, setIsOpenAvailability] = useState(false);
+
+  useEffect(() => {
+    // Fetch users data from the server
+    axios.get("/users").then((response) => {
+      setUsers(response.data.users);
+    });
+  }, []);
+
+  const handleSkillChange = (event) => {
+    const selectedSkill = event.target.value;
+    setSkill(selectedSkill);
+    // Fetch filtered users data from the server
+    axios.get(`/users?skill=${selectedSkill}`).then((response) => {
+      console.log(response.data.users); // add this line to log the response
+      setUsers(response.data.users);
+    });
   };
 
+  const handleLocationChange = async (event) => {
+    const selectedLocation = event.target.value;
+    setLocation(selectedLocation);
+    // Fetch filtered users data from the server
+    await axios.get(`/users?location=${selectedLocation}`).then((response) => {
+      setUsers(response.data.users);
+    });
+  };
+
+  const handleAvailabilityChange = async (event) => {
+    const selectedAvailability = event.target.value;
+    setAvb(selectedAvailability);
+    // Fetch filtered users data from the server
+    await axios
+      .get(`/users?availability=${selectedAvailability}`)
+      .then((response) => {
+        setUsers(response.data.users);
+      });
+  };
+
+  // const renderUsers = (selUsers) => {
+  //   selUsers.map((user) => <p>{user.id}</p>);
+  // };
+
   return (
-    <div className="relative inline-block text-left m-10">
+    <div className="relative m-10 flex">
       <div>
         <button
-          type="button"
-          className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-          id="menu-button"
-          aria-expanded="true"
-          aria-haspopup="true"
+          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          onClick={() => setIsOpenLocation(!isOpenLocation)}
         >
-          SKILLS
-          <svg
-            className="-mr-1 h-5 w-5 text-gray-400"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" />
-          </svg>
+          <span>Location</span>
+        </button>
+        <button
+          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          onClick={() => setIsOpenTechnologies(!isOpenTechnologies)}
+        >
+          <span>Skills</span>
+        </button>
+        <button
+          className=" mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          onClick={() => setIsOpenAvailability(!isOpenAvailability)}
+        >
+          <span>Availability</span>
         </button>
       </div>
 
-      <div
-        className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-        role="menu"
-        aria-orientation="vertical"
-        aria-labelledby="menu-button"
-        tabIndex="-1"
-      >
-        <div className="py-1" role="none">
-          {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-          {skills.map((skill, index) => (
-            <button
-              key={index}
-            //   onClick={filterByTag(skill)}
-              className="text-gray-700 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabIndex="-1"
-              id={`menu-item- + ${index}`}
+      <div>
+        {isOpenLocation && (
+          <div className="absolut z-10 mt-10 bg-white rounded-md shadow-lg">
+            <ul
+              className="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
             >
-              {skill}
-            </button>
-          ))}
+              {locations.map((option, idx) => (
+                <li key={idx}>
+                  <button
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 text-left"
+                    role="menuitem"
+                    onClick={handleLocationChange}
+                    value={option}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
 
-          {/* <form method="POST" action="#" role="none">
-            <button
-                type="submit"
-                className="text-gray-700 block w-full px-4 py-2 text-left text-sm"
-                role="menuitem"
-                tabIndex="-1"
-                id="menu-item-3"
+      <div>
+        {isOpenTechnologies && (
+          <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg">
+            <ul
+              className="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
             >
-                Sign out
-            </button>
-            </form> */}
-        </div>
+              {technologies.map((option, idx) => (
+                <li key={idx}>
+                  <button
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 text-left"
+                    role="menuitem"
+                    onClick={handleSkillChange}
+                    value={option}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      <div>
+        {isOpenAvailability && (
+          <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg">
+            <ul
+              className="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
+            >
+              {availability.map((option, idx) => (
+                <li key={idx}>
+                  <button
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 text-left"
+                    role="menuitem"
+                    onClick={handleAvailabilityChange}
+                    value={option}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
