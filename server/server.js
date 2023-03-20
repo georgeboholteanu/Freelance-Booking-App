@@ -50,7 +50,8 @@ app.put("/users/:id", (req, res) => {
   }
 
   // Update the user's availability
-  user.availability = req.body.availability;
+  // user.availability = req.body.availability;
+  user.availability = "Busy";
 
   // Save the updated data to the file
   fs.writeFile("./src/users.json", JSON.stringify(data), (err) => {

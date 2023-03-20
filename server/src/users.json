@@ -149,7 +149,7 @@
       "email": "fred.murray@example.com",
       "phone": "017687 16636",
       "picture": "user14.jpg",
-      "availability": "Available",
+      "availability": "Busy",
       "id": 14,
       "skills": ["React", "MongoDB", "SQL"],
       "location": "Oxford"
