@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
       <br />
-      {/* <Banner /> */}
+      <Banner />
       <br />
       {/* <div className="flex justify-center gap-6">
         <Dropdown options={cities} label="Select City" />
