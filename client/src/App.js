@@ -5,7 +5,7 @@ import NavTabs from './components/NavTabs';
 import About from "./components/pages/About";
 import AddUser from "./components/pages/AddUser";
 import Contact from "./components/pages/Contact";
-import Form from "./components/pages/Form";
+import BookUser from "./components/pages/BookUser";
 import Footer from "./components/Footer";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="adduser" element={<AddUser />} />
           {/* Define a route that will have descendant routes */}
-          <Route path="/form/:userId" element={<Form />} />
+          <Route path="/form/:userId" element={<BookUser />} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
         <Footer />
