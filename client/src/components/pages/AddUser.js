@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { technologies } from "../Variables";
 
 function AddUser() {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ function AddUser() {
   };
 
   const handleSectionChange = (e) => {
-    // const { value } = e.target;
+    
     const selectedOptions = Array.from(
       e.target.selectedOptions,
       (option) => option.value
@@ -61,41 +62,18 @@ function AddUser() {
 
     const mergedData = data.users;
     mergedData.push(newUserData);
-
-    console.log(mergedData);
-    // axios
-    //   .post("/adduser", { users: mergedData })
-    //   .then((response) => {
-    //     // User was added successfully
-    //     console.log("User added successfully1");
-    //   })
-    //   .catch((error) => {
-    //     // Handle the error
-    //     console.error("Error adding user:", error);
-    //   });
+    
+    axios
+      .post("/adduser", { users: mergedData })
+      .then((response) => {
+        // User was added successfully
+        console.log("User added successfully1");
+      })
+      .catch((error) => {
+        // Handle the error
+        console.error("Error adding user:", error);
+      });
   };
-
-  const technologies = [
-    "HTML",
-    "CSS",
-    "React",
-    "Javascript",
-    "NodeJS",
-    "ExpressJS",
-    "Tailwind",
-    "Bootstrap",
-    "Typescript",
-    "Python",
-    "C++",
-    "CSharp",
-    "MongoDB",
-    "Django",
-    "Flask",
-    "ASP.NET",
-    "Laravel",
-    "Ruby",
-    "SQL",
-  ];
 
   return (
     <div>
