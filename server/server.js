@@ -1,27 +1,45 @@
-// jshint esversion: 6
-// import data from "./users.json";
-
 const data = require("./src/users.json");
 const express = require("express");
 const fs = require("fs");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json()); // Add this line to parse JSON requests
 
-app.get("/", (req, res) => res.send("Helloooo"));
-
-// Get all users
+// GET /users endpoint
 app.get("/users", (req, res) => {
-  res.json({
-    users: data.users,
-  });
+  // Get the value of the 'skill' query parameter, if any
+  const { skill } = req.query;
+
+  // If 'skill' is provided, filter users by their skills
+  let filteredUsers = data.users;
+
+  // if (location) {
+  //   filteredUsers = data.users.filter((user) => user.location.includes(loc));
+  //   // Return the filtered users as JSON
+  //   res.json({ users: filteredUsers });
+  // } else {
+  //   res.json({ users: data.users });
+  // }
+
+  if (skill) {
+    filteredUsers = data.users.filter((user) => user.skills.includes(skill));
+    // Return the filtered users as JSON
+    res.json({ users: filteredUsers });
+  } else {
+    res.json({ users: data.users });
+  }
+
+  // if (avb) {
+  //   filteredUsers = data.users.filter(
+  //     (user) => user.availability == avb
+  //   );
+  //   // Return the filtered users as JSON
+  //   res.json({ users: filteredUsers });
+  // } else {
+  //   res.json({ users: data.users });
+  // }
 });
-
-// Get user by skill
-app.get("/users", (req, res) => {
-  
-})
 
 // Update a user's availability
 app.put("/users/:id", (req, res) => {
@@ -32,7 +50,8 @@ app.put("/users/:id", (req, res) => {
   }
 
   // Update the user's availability
-  user.availability = req.body.availability;
+  // user.availability = req.body.availability;
+  user.availability = "Busy";
 
   // Save the updated data to the file
   fs.writeFile("./src/users.json", JSON.stringify(data), (err) => {
@@ -47,7 +66,7 @@ app.put("/users/:id", (req, res) => {
 // Define a route for adding a new user
 app.post("/adduser", async (req, res) => {
   // Extract the user data from the request body
-  const newUser = req.body
+  const newUser = req.body;
 
   // Write the new user to the database
   await fs.writeFile("./src/users.json", JSON.stringify(newUser), (err) => {

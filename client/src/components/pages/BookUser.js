@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Form = () => {
+const BookUser = () => {
   const [backendData, setbackendData] = useState({ users: [] });
   const [formCompleted, setFormCompleted] = useState(false);
   const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ const Form = () => {
     console.log(data);
     setbackendData((prevState) => {
       const updatedUsers = prevState.users.map((user) =>
-        user.id === getUserId() ? { ...user, availability: false } : user
+        user.id === getUserId() ? { ...user, availability: "Busy" } : user
       );
       return { users: updatedUsers };
     });
@@ -150,4 +150,4 @@ const Form = () => {
   )
 }
 
-export default Form;
+export default BookUser;
