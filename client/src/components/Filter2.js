@@ -16,23 +16,23 @@ function FilterData() {
   const [isOpenTechnologies, setIsOpenTechnologies] = useState(false);
   const [isOpenAvailability, setIsOpenAvailability] = useState(false);
 
-  const dropdownRef = useRef(null);
+  // const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    // Close dropdown when user clicks outside
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpenLocation(false);
-        setIsOpenTechnologies(false);
-        setIsOpenAvailability(false);
-      }
-    }
+  // useEffect(() => {
+  //   // Close dropdown when user clicks outside
+  //   function handleClickOutside(event) {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setIsOpenLocation(false);
+  //       setIsOpenTechnologies(false);
+  //       setIsOpenAvailability(false);
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [dropdownRef]);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [dropdownRef]);
 
   useEffect(() => {
     // Fetch users data from the server
@@ -107,7 +107,9 @@ function FilterData() {
         </button>
       </div>
 
-      <div ref={dropdownRef} className="">
+      <div 
+      // ref={dropdownRef} 
+      className="">
         {isOpenLocation && (
           <div className="absolute z-10 mt-10 bg-white rounded-md shadow-lg">
             <ul
@@ -133,7 +135,9 @@ function FilterData() {
         )}
       </div>
 
-      <div ref={dropdownRef}>
+      <div
+      // ref={dropdownRef}
+      >
         {isOpenTechnologies && (
           <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg">
             <ul
@@ -159,7 +163,9 @@ function FilterData() {
         )}
       </div>
 
-      <div ref={dropdownRef}>
+      <div 
+      // ref={dropdownRef}
+      >
         {isOpenAvailability && (
           <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg">
             <ul
