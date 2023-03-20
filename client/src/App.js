@@ -6,13 +6,14 @@ import About from "./components/pages/About";
 import AddUser from "./components/pages/AddUser";
 import Contact from "./components/pages/Contact";
 import Form from "./components/pages/Form";
+import Footer from "./components/Footer";
 
 function App() {
   
   return (
     <Router>
       <div>
-      <NavTabs />
+        <NavTabs />
 
         {/* Wrap Route elements in a Routes component */}
         <Routes>
@@ -25,10 +26,10 @@ function App() {
           <Route path="/form/:userId" element={<Form />} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
 }
-
 
 export default App;
