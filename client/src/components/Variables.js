@@ -6,6 +6,9 @@ const locations = [
   "Leeds",
   "Liverpool",
   "Sheffield",
+  "Oxford",
+  "Bristol",
+  "Edinburgh"
 ];
 
 const technologies = [
