@@ -12,6 +12,7 @@ function AddUser() {
     availability: false,
     skills: [],
     id: "",
+    location: "",
   });
 
   const handleInputChange = (e) => {
@@ -77,7 +78,7 @@ function AddUser() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4 justify-center">
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2 text-gray-700">
             Name
@@ -135,6 +136,20 @@ function AddUser() {
           />
         </div>
         <div className="mb-4">
+          <label htmlFor="Location" className="block mb-2 text-gray-700">
+            Location
+          </label>
+          <input
+            type="location"
+            name="location"
+            id="location"
+            value={formData.location}
+            onChange={handleInputChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div className="mb-4">
           <label htmlFor="availability" className="block mb-2 text-gray-700">
             Availability Status
           </label>
@@ -171,7 +186,7 @@ function AddUser() {
 
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-10 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Add New User
         </button>
