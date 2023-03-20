@@ -71,18 +71,18 @@ function FilterData() {
   return (
     <div className="relative m-10 justify-center text-center">
       <div className="m-5 ">
+      <button
+  className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 border border-gray-300"
+  onClick={() => {
+    setIsOpenLocation(!isOpenLocation);
+    setIsOpenTechnologies(false);
+    setIsOpenAvailability(false);
+  }}
+>
+  <span className="text-lg">Location</span>
+</button>
         <button
-          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-          onClick={() => {
-            setIsOpenLocation(!isOpenLocation);
-            setIsOpenTechnologies(false);
-            setIsOpenAvailability(false);
-          }}
-        >
-          <span className="text-lg">Location</span>
-        </button>
-        <button
-          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 border border-gray-300"
           onClick={() => {
             setIsOpenLocation(false);
             setIsOpenTechnologies(!isOpenTechnologies);
@@ -92,7 +92,7 @@ function FilterData() {
           <span className="text-lg">Skills</span>
         </button>
         <button
-          className=" mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 border border-gray-300"
           onClick={() => {
             setIsOpenAvailability(!isOpenAvailability);
             setIsOpenLocation(false);
