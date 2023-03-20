@@ -71,7 +71,7 @@ function FilterData() {
   return (
     <div className="relative m-10 justify-center text-center">
       {/* FILTER BUTTONS */}
-      <div className="m-5 bg-gray-500">
+      <div className="m-5 bg-gray-500 shadow-lg rounded-md">
         <button
           className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
@@ -107,12 +107,12 @@ function FilterData() {
       {/* DROPDOWN LISTS */}
       <div
         // ref={dropdownRef}
-        className="flex"
+        className="flex justify-center"
       >
         {isOpenLocation && (
-          <div className="w-full z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
+          <div className="w-max z-10 mb-10 bg-gray-100 rounded-md shadow-lg ">
             <ul
-              className="py-1 flex justify-center mx-5"
+              className="py-1 flex mx-5"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -135,12 +135,13 @@ function FilterData() {
       </div>
 
       <div
+      className="flex justify-center"
       // ref={dropdownRef}
       >
         {isOpenTechnologies && (
-          <div className="w-full z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
+          <div className="w-max z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
             <ul
-              className="py-1 flex justify-center"
+              className="py-1 flex"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -163,10 +164,11 @@ function FilterData() {
       </div>
 
       <div
+      className="flex justify-center"
       // ref={dropdownRef}
       >
         {isOpenAvailability && (
-          <div className="w-full z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
+          <div className="w-max z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
             <ul
               className="py-1 flex justify-center"
               role="menu"
