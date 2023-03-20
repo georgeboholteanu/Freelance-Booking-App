@@ -20,15 +20,10 @@ function Footer() {
               Contact Us
             </NavLink>
             {' | '}
-            <NavLink to="/contact" className="inline-block py-2 px-4 text-gray-800 hover:text-gray-500 font-semibold">
-              Careers
-            </NavLink>
-            {' | '}
             <NavLink to="https://github.com/georgeboholteanu/Freelance-Booking-App" className="inline-block py-2 px-4 text-gray-800 hover:text-gray-500 font-semibold">
               Resources
             </NavLink>
-            {' | '}
-          </span>
+            </span>
         </div>
         <div className="text-gray-600">
           <div className="flex items-center justify-center mb-4">

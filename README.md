@@ -49,14 +49,12 @@ Frameworks used:
 
 ## Screenshot
 Initial Wireframe design:
-![Screenshot-of-Wireframe](/Freelance-Booking-App/client/public/assets/images/Wireframe.png)
-
+![Screenshot-of-Wireframe](./client/public/assets/images/Wireframe.png)
 
 Colour and Style Inspiration:
-![Screenshot-of-design-inspiration](/Freelance-Booking-App/client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-banner-byIzraTech.png)
+![Screenshot-of-design-inspiration](./client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-banner-byIzraTech.png)
 
-
-![Screenshot-of-design-inspiration-Footer](/Freelance-Booking-App/client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-footer-byIzraTech.png)
+![Screenshot-of-design-inspiration-Footer](./client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-footer-byIzraTech.png)
 
 
 
