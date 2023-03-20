@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { NavLink } from 'react-router-dom';
 
@@ -10,10 +10,29 @@ function FilterData() {
   const [skill, setSkill] = useState("");
   const [location, setLocation] = useState("");
   const [avb, setAvb] = useState("");
+  
 
   const [isOpenLocation, setIsOpenLocation] = useState(false);
   const [isOpenTechnologies, setIsOpenTechnologies] = useState(false);
   const [isOpenAvailability, setIsOpenAvailability] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    // Close dropdown when user clicks outside
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpenLocation(false);
+        setIsOpenTechnologies(false);
+        setIsOpenAvailability(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   useEffect(() => {
     // Fetch users data from the server
@@ -54,31 +73,43 @@ function FilterData() {
 
 
   return (
-    <div className="relative m-10 flex">
-      <div>
+    <div className="relative m-10 justify-center text-center">
+      <div className="m-5 ">
         <button
           className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-          onClick={() => setIsOpenLocation(!isOpenLocation)}
+          onClick={() => {
+            setIsOpenLocation(!isOpenLocation)
+            setIsOpenTechnologies(false)
+            setIsOpenAvailability(false)
+          }}
         >
           <span>Location</span>
         </button>
         <button
           className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-          onClick={() => setIsOpenTechnologies(!isOpenTechnologies)}
+          onClick={() => {
+            setIsOpenLocation(false)
+            setIsOpenTechnologies(!isOpenTechnologies)
+            setIsOpenAvailability(false)
+          }}
         >
           <span>Skills</span>
         </button>
         <button
           className=" mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-          onClick={() => setIsOpenAvailability(!isOpenAvailability)}
+          onClick={() => {
+            setIsOpenAvailability(!isOpenAvailability)
+            setIsOpenLocation(false)
+            setIsOpenTechnologies(false)
+          }}
         >
           <span>Availability</span>
         </button>
       </div>
 
-      <div>
+      <div ref={dropdownRef} className="">
         {isOpenLocation && (
-          <div className="absolut z-10 mt-10 bg-white rounded-md shadow-lg">
+          <div className="absolute z-10 mt-10 bg-white rounded-md shadow-lg">
             <ul
               className="py-1"
               role="menu"
@@ -102,7 +133,7 @@ function FilterData() {
         )}
       </div>
 
-      <div>
+      <div ref={dropdownRef}>
         {isOpenTechnologies && (
           <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg">
             <ul
@@ -128,7 +159,7 @@ function FilterData() {
         )}
       </div>
 
-      <div>
+      <div ref={dropdownRef}>
         {isOpenAvailability && (
           <div className="absolute z-10 mt-2 bg-white rounded-md shadow-lg">
             <ul
@@ -156,7 +187,7 @@ function FilterData() {
 
       <div
       id="users"
-      className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-10"
+      className="justify-center grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5 px-10"
     >
       {users.length === 0 ? (
         <p>Loading...</p>
@@ -194,22 +225,15 @@ function FilterData() {
               {user.availability ? (
                 <NavLink
                 to={`/form/${user.id}`}
-                className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 data-user={user.id}
                 >
                   Book me
                 </NavLink>
-                // <button
-                //   onClick={bookUser}
-                //   className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                //   data-user={user.id}
-                // >
-                //   Book Me
-                // </button>
               ) : (
                 <a
                   role="button"
-                  className="inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  className="block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                   href={`mailto:${user.email}`}
                 >
                   Send Inquiry

@@ -1,6 +1,3 @@
-// jshint esversion: 6
-// import data from "./users.json";
-
 const data = require("./src/users.json");
 const express = require("express");
 const fs = require("fs");

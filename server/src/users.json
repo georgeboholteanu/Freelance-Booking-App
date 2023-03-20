@@ -16,7 +16,7 @@
       "email": "ronnie.jensen@example.com",
       "phone": "0117732 370 7838",
       "picture": "user2.jpg",
-      "availability": "Available",
+      "availability": false,
       "id": 2,
       "skills": ["Flask", "Laravel", "MongoDB"]
     },
@@ -286,7 +286,7 @@
       "email": "linda.hunt@example.com",
       "phone": "019467 24965",
       "picture": "user29.jpg",
-      "availability": "Available",
+      "availability": false,
       "id": 29,
       "skills": ["Laravel", "Typescript", "HTML"]
     },
