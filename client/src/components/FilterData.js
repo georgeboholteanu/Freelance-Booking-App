@@ -40,12 +40,12 @@ function FilterData() {
     });
   }, []);
 
-  const handleSkillChange = (event) => {
+  const handleSkillChange = async (event) => {
     const selectedSkill = event.target.value;
     setSkill(selectedSkill);
     // Fetch filtered users data from the server
-    axios.get(`/users?skill=${selectedSkill}`).then((response) => {
-      console.log(response.data.users); // add this line to log the response
+    await axios.get(`/users?skill=${selectedSkill}`).then((response) => {
+      console.log(response.data.users); 
       setUsers(response.data.users);
     });
   };
@@ -70,9 +70,10 @@ function FilterData() {
 
   return (
     <div className="relative m-10 justify-center text-center">
-      <div className="m-5 ">
+      {/* FILTER BUTTONS */}
+      <div className="m-5 bg-gray-500">
         <button
-          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
             setIsOpenLocation(!isOpenLocation);
             setIsOpenTechnologies(false);
@@ -82,7 +83,7 @@ function FilterData() {
           <span className="text-lg">Location</span>
         </button>
         <button
-          className="mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
             setIsOpenLocation(false);
             setIsOpenTechnologies(!isOpenTechnologies);
@@ -92,7 +93,7 @@ function FilterData() {
           <span className="text-lg">Skills</span>
         </button>
         <button
-          className=" mx-5 items-center justify-center  px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
             setIsOpenAvailability(!isOpenAvailability);
             setIsOpenLocation(false);
@@ -103,7 +104,7 @@ function FilterData() {
         </button>
       </div>
 
-      {/* DROPDOWN MENU */}
+      {/* DROPDOWN LISTS */}
       <div
         // ref={dropdownRef}
         className="flex"
@@ -111,7 +112,7 @@ function FilterData() {
         {isOpenLocation && (
           <div className="w-full z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
             <ul
-              className="py-1 flex justify-center"
+              className="py-1 flex justify-center mx-5"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -119,7 +120,7 @@ function FilterData() {
               {locations.map((option, idx) => (
                 <li key={idx} className="text-center">
                   <button
-                    className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-blue-300"
                     role="menuitem"
                     onClick={handleLocationChange}
                     value={option}
@@ -147,7 +148,7 @@ function FilterData() {
               {technologies.map((option, idx) => (
                 <li key={idx} className="text-center">
                   <button
-                    className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 text-left"
+                    className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-blue-300"
                     role="menuitem"
                     onClick={handleSkillChange}
                     value={option}
@@ -175,7 +176,7 @@ function FilterData() {
               {availability.map((option, idx) => (
                 <li key={idx} className="text-center">
                   <button
-                    className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 text-left"
+                    className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-blue-300"
                     role="menuitem"
                     onClick={handleAvailabilityChange}
                     value={option}
@@ -189,6 +190,7 @@ function FilterData() {
         )}
       </div>
 
+      {/* FREELANCERS */}
       <div
         id="users"
         className="justify-center grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5 px-10"
@@ -198,11 +200,11 @@ function FilterData() {
         ) : (
           users.map((user) => (
             <div
-              className="max-w-sm rounded overflow-hidden shadow-lg"
+              className="w-full h-[550px] bg-gray-100  rounded shadow-lg border-gray-300 flex flex-col"
               key={user.id}
             >
               <img
-                className="w-full"
+                className="w-full object-contain min-h-0"
                 src={`./assets/images/${user.picture}`}
                 alt="user avatar"
               />
@@ -218,7 +220,7 @@ function FilterData() {
                 {user.skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-4"
                   >
                     {skill}
                   </span>
