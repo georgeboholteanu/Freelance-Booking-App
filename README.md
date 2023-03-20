@@ -1,11 +1,11 @@
 # Freelance Booking App
 
 ## Description
-This Single Page Application is a convenient platform for browsing and hiring a diverse range of freelancers. Users can easily check the availability of freelancers and send them enquiries via a simple form if they are currently booked. The website also features useful filters for refining search results, such as by location, skills, and work type (e.g. full time, part time, contract).
+This Single Page Application is a user-friendly platform designed to facilitate the search and hiring of talented freelancers for various purposes, including personal projects, company migration, training opportunities, and collaborative work. To achieve this, we used the data from Random people generator website, which we adjusted slightly to fit our needs, and the images have been downloaded from https://unsplash.com/.
 
-Built using React.js, Node, Tailwind and Express, this website aims to make it easier for individuals and businesses to find and hire freelancers for various purposes, such as personal projects, company migration, training opportunities, and collaborative work. With its user-friendly interface and powerful search capabilities, the website offers a streamlined and efficient way to connect with talented professionals and get projects done.
+Users can easily browse and filter through a diverse range of freelancers by location, skills, and work type (e.g. full time, part time, contract), and can also check their availability and send enquiries via a simple form. With its powerful search capabilities, the website provides an efficient and streamlined way for individuals and businesses to find the right freelancers for their projects.
 
-Additionally, freelancers can add themselves to the portfolio of available freelancers by filling out a basic form in the "Add User" section.
+Built using React.js, Node, Tailwind, and Express, this website boasts an intuitive and user-friendly interface that ensures a seamless and enjoyable user experience. Moreover, freelancers can easily add themselves to the portfolio of available freelancers by filling out a basic form in the "Add User" section, enabling them to showcase their skills and expertise to potential clients.
 
 Minimum viable product:
 * Navigation bar

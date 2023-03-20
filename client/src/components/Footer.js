@@ -26,14 +26,24 @@ function Footer() {
             </span>
         </div>
         <div className="text-gray-600">
-          <div className="flex items-center justify-center mb-4">
-            <a href="https://github.com/georgeboholteanu" className="mr-4"><RiGithubFill size={24} color="#C53030" /></a>
-            <a href="https://github.com/Andzej-S" className="mr-4"><RiGithubFill size={24} color="#C53030" /></a>
-            <a href="https://github.com/DavidHJolley" className="mr-4"><RiGithubFill size={24} color="#C53030" /></a>
-            <a href="https://github.com/TahminaHannan"><RiGithubFill size={24} color="#C53030" /></a>
-          </div>
-          <p className="font-semibold text-center">&copy; {new Date().getFullYear()} Company Name. All rights reserved.</p>
-        </div>
+        <div className="flex items-center justify-center mb-4">
+      <NavLink to={'https://github.com/georgeboholteanu'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <i className="fa-brands fa-github"></i>
+        </NavLink>
+        <NavLink to={'https://github.com/Andzej-S'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <i className="fa-brands fa-github"></i>
+        </NavLink>
+        <NavLink to={'https://github.com/DavidHJolley'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <i className="fa-brands fa-github"></i>
+        </NavLink>
+        <NavLink to={'https://github.com/TahminaHannan'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <i className="fa-brands fa-github"></i>
+     </NavLink>
+  </div>
+  <p className="font-semibold text-center">&copy; {new Date().getFullYear()} Copyright. All rights reserved.
+  </p>
+</div>
+
       </div>
     </footer>
   );
