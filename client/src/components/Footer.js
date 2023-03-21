@@ -4,7 +4,7 @@ import { RiGithubFill } from 'react-icons/ri';
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 py-4 mt-100">
+    <footer className="bg-gray-100 py-4 mt-100 border border-gray-200">
       <div className="flex flex-col items-center justify-center">
         <div className="flex items-center justify-center mb-4">
           <span className="font-semibold text-gray-500">
