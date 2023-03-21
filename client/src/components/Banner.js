@@ -18,7 +18,7 @@ function Banner() {
         <div className="mx-auto max-w-xl text-center">
           <h1 className="text-3xl font-extrabold sm:text-5xl">
             Support Freelancers
-            <strong className="font-extrabold text-red-700 sm:block">
+            <strong className="font-extrabold text-red-600 sm:block">
               Increase productivity
             </strong>
           </h1>

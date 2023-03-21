@@ -27,16 +27,16 @@ function Footer() {
         </div>
         <div className="text-gray-600">
         <div className="flex items-center justify-center mb-4">
-      <NavLink to={'https://github.com/georgeboholteanu'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+      <NavLink to={'https://github.com/georgeboholteanu'} className="socialIcons text-cyan-400 text-2xl m-1 hover:text-red-500">
         <i className="fa-brands fa-github"></i>
         </NavLink>
-        <NavLink to={'https://github.com/Andzej-S'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <NavLink to={'https://github.com/Andzej-S'} className="socialIcons text-cyan-500 text-2xl m-1 hover:text-red-500">
         <i className="fa-brands fa-github"></i>
         </NavLink>
-        <NavLink to={'https://github.com/DavidHJolley'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <NavLink to={'https://github.com/DavidHJolley'} className="socialIcons text-sky-600 text-2xl m-1 hover:text-red-500">
         <i className="fa-brands fa-github"></i>
         </NavLink>
-        <NavLink to={'https://github.com/TahminaHannan'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+        <NavLink to={'https://github.com/TahminaHannan'} className="socialIcons text-cyan-700 text-2xl m-1 hover:text-red-500">
         <i className="fa-brands fa-github"></i>
      </NavLink>
   </div>
