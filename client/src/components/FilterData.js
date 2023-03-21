@@ -207,7 +207,7 @@ function FilterData() {
             >
               <img
                 className="w-full object-contain min-h-0"
-                src={`./assets/images/${user.picture}`}
+                src={`http://localhost:5000/static/images/${user.picture}`}
                 alt="user avatar"
               />
               <div className="px-6 py-4">

@@ -1,12 +1,42 @@
 const data = require("./src/users.json");
+const path = require("path");
 const express = require("express");
+const multer  = require('multer')
 const fs = require("fs");
+
 const port = process.env.PORT || 5000;
 const app = express();
 
-app.use(express.json()); // Add this line to parse JSON requests
+//***     Configure express     **//
+app.use("/static", express.static("public"));
+app.use(express.json());
 
-// GET /users endpoint
+
+//***     Set storage engine     **//
+const storage = multer.diskStorage({
+  destination: 'public/images/',
+  filename: function(req, file, cb) {
+    // Generate a unique filename by appending the current timestamp
+    const uniqueSuffix = data.users.length + 1;
+    const extname = path.extname(file.originalname);
+    const newFilename = file.fieldname + uniqueSuffix + extname;
+
+    cb(null, newFilename);
+  }
+
+});
+
+//***    Initialize multer upload     ***//
+const upload = multer({ storage: storage });
+
+
+//***    Handle POST request to upload an image     ***//
+app.post('/upload', upload.single('user'), (req, res) => {
+  // res.send('File uploaded successfully!');
+});
+
+
+//***    GET /users endpoint    ***//
 app.get("/users", (req, res) => {
   // If 'skill' is provided, filter users by their skills
   let filteredUsers = data.users;
@@ -24,18 +54,16 @@ app.get("/users", (req, res) => {
     res.json({ users: filteredUsers });
   } else if (req.query.avb) {
     const { avb } = req.query;
-    filteredUsers = data.users.filter(
-      (user) => user.availability == avb
-    );
+    filteredUsers = data.users.filter((user) => user.availability == avb);
     // Return the filtered users as JSON
     res.json({ users: filteredUsers });
   } else {
     res.json({ users: data.users });
-  }  
-
+  }
 });
 
-// Update a user's availability
+
+//***    Update a user's availability   ***//
 app.put("/users/:id", (req, res) => {
   const userId = req.params.id;
   const user = data.users.find((u) => u.id === parseInt(userId));
@@ -45,7 +73,6 @@ app.put("/users/:id", (req, res) => {
 
   // Update the user's availability
   user.availability = req.body.availability;
-
 
   // Save the updated data to the file
   fs.writeFile("./src/users.json", JSON.stringify(data), (err) => {
@@ -57,7 +84,8 @@ app.put("/users/:id", (req, res) => {
   });
 });
 
-// Define a route for adding a new user
+
+//***   Define a route for adding a new user   ***//
 app.post("/adduser", async (req, res) => {
   // Extract the user data from the request body
   const newUser = req.body;
@@ -71,9 +99,8 @@ app.post("/adduser", async (req, res) => {
     res.send("User added successfully");
   });
 
-  // Send a response indicating that the user was added successfully
-  // res.status(201).json({ message: 'User added successfully' });
 });
+
 
 app.listen(port, () => {
   console.log(`Server Started on port ${port}`);
