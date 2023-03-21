@@ -8,37 +8,31 @@ app.use(express.json()); // Add this line to parse JSON requests
 
 // GET /users endpoint
 app.get("/users", (req, res) => {
-  // Get the value of the 'skill' query parameter, if any
-  const { skill } = req.query;
-
   // If 'skill' is provided, filter users by their skills
   let filteredUsers = data.users;
 
-  // if (location) {
-  //   filteredUsers = data.users.filter((user) => user.location.includes(loc));
-  //   // Return the filtered users as JSON
-  //   res.json({ users: filteredUsers });
-  // } else {
-  //   res.json({ users: data.users });
-  // }
-
-  if (skill) {
+  // Get the value of the 'skill' query parameter, if any
+  if (req.query.skill) {
+    const { skill } = req.query;
     filteredUsers = data.users.filter((user) => user.skills.includes(skill));
+    // Return the filtered users as JSON
+    res.json({ users: filteredUsers });
+  } else if (req.query.loc) {
+    const { loc } = req.query;
+    filteredUsers = data.users.filter((user) => user.location === loc);
+    // Return the filtered users as JSON
+    res.json({ users: filteredUsers });
+  } else if (req.query.avb) {
+    const { avb } = req.query;
+    filteredUsers = data.users.filter(
+      (user) => user.availability == avb
+    );
     // Return the filtered users as JSON
     res.json({ users: filteredUsers });
   } else {
     res.json({ users: data.users });
-  }
+  }  
 
-  // if (avb) {
-  //   filteredUsers = data.users.filter(
-  //     (user) => user.availability == avb
-  //   );
-  //   // Return the filtered users as JSON
-  //   res.json({ users: filteredUsers });
-  // } else {
-  //   res.json({ users: data.users });
-  // }
 });
 
 // Update a user's availability
