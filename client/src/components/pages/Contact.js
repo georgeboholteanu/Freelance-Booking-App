@@ -29,16 +29,16 @@ function Contact() {
         <div className="bg-white rounded-lg shadow-lg p-4">
           <h3 className="text-lg font-medium mb-2">Github</h3>
           <p className="text-gray-500">
-          <NavLink to={'https://github.com/georgeboholteanu'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+          <NavLink to={'https://github.com/georgeboholteanu'} className="socialIcons text-sky-600 text-2xl m-1 hover:text-red-500">
             <i className="fa-brands fa-github"></i>
           </NavLink>
-          <NavLink to={'https://github.com/Andzej-S'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+          <NavLink to={'https://github.com/Andzej-S'} className="socialIcons text-sky-600 text-2xl m-1 hover:text-red-500">
             <i className="fa-brands fa-github"></i>
           </NavLink>
-          <NavLink to={'https://github.com/DavidHJolley'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+          <NavLink to={'https://github.com/DavidHJolley'} className="socialIcons text-sky-600 text-2xl m-1 hover:text-red-500">
             <i className="fa-brands fa-github"></i>
           </NavLink>
-          <NavLink to={'https://github.com/TahminaHannan'} className="socialIcons text-yellow-400 text-2xl m-1 hover:text-sky-400">
+          <NavLink to={'https://github.com/TahminaHannan'} className="socialIcons text-sky-600 text-2xl m-1 hover:text-red-500">
             <i className="fa-brands fa-github"></i>
           </NavLink>
           </p>

@@ -47,16 +47,15 @@ Frameworks used:
 ![Badge Name](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) 
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![Badge Name](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)
-![Badge Name](https://img.shields.io/badge/Netlify-00C7B7.svg?style=for-the-badge&logo=Netlify&logoColor=white)
+
 
 ## Screenshot
 Initial Wireframe design:
 ![Screenshot-of-Wireframe](./client/public/assets/images/Wireframe.png)
 
-Colour and Style Inspiration:
+Inspiration:
 ![Screenshot-of-design-inspiration](./client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-banner-byIzraTech.png)
 
-![Screenshot-of-design-inspiration-Footer](./client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-footer-byIzraTech.png)
 
 
 
