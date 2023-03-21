@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
       <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
       <div className="max-w-7xl grid mx-auto lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
         <div className="bg-white rounded-lg shadow-lg p-4">
