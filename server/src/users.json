@@ -259,7 +259,7 @@
       "email": "alanna.mitchell@example.com",
       "phone": "015394 79409",
       "picture": "user24.jpg",
-      "availability": false,
+      "availability": "Busy",
       "id": 24,
       "skills": ["Javascript", "CSharp", "NodeJS"],
       "location": "Birmingham"
