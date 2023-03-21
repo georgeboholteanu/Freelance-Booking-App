@@ -15,28 +15,28 @@ function About() {
           <div className="bg-blue-100 shadow-md rounded-lg px-6 py-8 hover:bg-blue-200 transition duration-300 ease-in-out">
             <h2 className="text-2xl font-bold text-blue-600 mb-4">Meet the Team</h2>
             <div className="flex items-center">
-              <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="George" className="w-12 h-12 rounded-full mr-4" />
+              <img src="https://randomuser.me/api/portraits/women/15.jpg" alt="George" className="w-12 h-12 rounded-full mr-4" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">George</h3>
                 <p className="text-gray-700">Front-end Developer</p>
               </div>
             </div>
             <div className="flex items-center mt-4">
-              <img src="https://randomuser.me/api/portraits/men/80.jpg" alt="David" className="w-12 h-12 rounded-full mr-4" />
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="David" className="w-12 h-12 rounded-full mr-4" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">David</h3>
                 <p className="text-gray-700">UI/UX Designer</p>
               </div>
             </div>
             <div className="flex items-center mt-4">
-              <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Tahmina" className="w-12 h-12 rounded-full mr-4" />
+              <img src="https://randomuser.me/api/portraits/men/80.jpg" alt="Tahmina" className="w-12 h-12 rounded-full mr-4" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">Tahmina</h3>
                 <p className="text-gray-700">Front-end Developer</p>
               </div>
             </div>
             <div className="flex items-center mt-4">
-              <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Andzej" className="w-12 h-12 rounded-full mr-4" />
+              <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Andzej" className="w-12 h-12 rounded-full mr-4" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">Andzej</h3>
                 <p className="text-gray-700">Front-end Developer</p>
@@ -66,7 +66,7 @@ function About() {
                 </div>
               </div>
               <div className="flex items-center">
-                <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Person Mcperson" className="w-12 h-12 rounded-full mr-4" />
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Person Mcperson" className="w-12 h-12 rounded-full mr-4" />
                 <div className="flex flex-col">
                   <div className="flex items-center">
                     <span className="text-lg text-gray-700 mr-2">"I highly recommend this app to anyone looking to hire talented and reliable freelancers. The platform is easy to use and the customer support is excellent."</span>
