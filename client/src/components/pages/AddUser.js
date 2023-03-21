@@ -3,12 +3,12 @@ import axios from "axios";
 import { technologies } from "../Variables";
 
 function AddUser() {
+  const [image, setImage] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
     email: "",
     phone: "",
-    picture: "",
     availability: false,
     skills: [],
     id: "",
@@ -32,7 +32,6 @@ function AddUser() {
   };
 
   const handleSectionChange = (e) => {
-    
     const selectedOptions = Array.from(
       e.target.selectedOptions,
       (option) => option.value
@@ -48,27 +47,52 @@ function AddUser() {
     return newId;
   };
 
+  // const handleImageChange = (e) => {
+  //   setImage(e.target.files[0]);
+  // };
+
+  const handleUpload = async () => {
+    const formDataImg = new FormData();
+    formDataImg.append("user", image);
+    axios
+      .post("/upload", formDataImg)
+      .then((response) => {
+        console.log("File uploaded successfully!");
+      })
+      .catch((error) => {
+        console.error("Error uploading file:", error);
+      });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    //get existing data and merge it with the formData
     const { data } = await axios.get("/users");
 
     const newId = await generateNewId(data.users);
 
+    //get existing formData into an object
     const newUserData = {
       ...formData,
       id: newId,
+      availability: (formData.availability) ? "Available" : "Busy",
+      // picture: image.name, // screenshot.png
+      picture: `user${newId}.jpg` // WIP
     };
 
+    // upload user image to server
+    if (image) {
+      handleUpload();
+    } 
+
+    // merge the new data with the existing
     const mergedData = data.users;
     mergedData.push(newUserData);
-    
+
     axios
       .post("/adduser", { users: mergedData })
       .then((response) => {
         // User was added successfully
-        console.log("User added successfully1");
+        console.log("User added successfully!");
       })
       .catch((error) => {
         // Handle the error
@@ -78,7 +102,10 @@ function AddUser() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4 justify-center">
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-md mx-auto mt-4 justify-center"
+      >
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2 text-gray-700">
             Name
@@ -137,7 +164,7 @@ function AddUser() {
         </div>
         <div className="mb-4">
           <label htmlFor="Location" className="block mb-2 text-gray-700">
-            Location
+            City
           </label>
           <input
             type="location"
@@ -164,13 +191,13 @@ function AddUser() {
           <label htmlFor="availability">Available</label>
         </div>
         <div className="mb-4">
-          <label htmlFor="skill1" className="block mb-2 text-gray-700">
-            Skills
+          <label htmlFor="skill" className="block mb-2 text-gray-700">
+            Skills (Use Ctrl for multiple selection)
           </label>
           <select
             type="text"
-            name="skill1"
-            id="skill1"
+            name="skill"
+            id="skill"
             multiple={true}
             onChange={handleSectionChange}
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -183,10 +210,31 @@ function AddUser() {
             ))}
           </select>
         </div>
+        <div className="mb-4">
+          <label htmlFor="picture" className="block mb-2 text-gray-700">
+            Profile Picture
+          </label>
+          {/* <form action="/upload" method="post" enctype="multipart/form-data"> */}
+            <input
+              type="file"
+              name="user"
+              required
+              onChange={(e) => setImage(e.target.files[0])}
+            />
+            <button
+              className="bg-gray-500 hover:bg-gray-700 text-white font-bold mx-5 mb-10 py-1 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+              onClick={handleUpload}
+            >
+              Upload
+            </button>
+          {/* </form> */}
+        </div>
 
         <button
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-10 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          onClick={handleSubmit}
         >
           Add New User
         </button>
