@@ -221,6 +221,20 @@ function AddUser() {
           </select>
         </div>
         <div className="mb-4">
+          <label htmlFor="About" className="block mb-2 text-gray-700">
+            About
+          </label>
+          <input
+            type="about"
+            name="about"
+            id="about"
+            value={formData.about}
+            onChange={handleInputChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div className="mb-4">
           <label htmlFor="picture" className="block mb-2 text-gray-700">
             Profile Picture
           </label>
@@ -250,6 +264,7 @@ function AddUser() {
         <button 
         type="submit"
         disabled={!isFormValid()}
+        onChange={handleInputChange}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
           Add User
         </button>
