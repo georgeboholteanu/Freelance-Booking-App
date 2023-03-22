@@ -213,9 +213,7 @@ function FilterData() {
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{`${user.name} ${user.surname}`}</div>
                 <p className="text-gray-700 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
+                  {user.about ? user.about : "User has no details to share."}
                 </p>
               </div>
               <div className="px-6 pt-4 pb-2">

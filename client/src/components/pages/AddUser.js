@@ -3,6 +3,7 @@ import axios from "axios";
 import { technologies } from "../Variables";
 
 function AddUser() {
+  const [formCompleted, setFormCompleted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -13,6 +14,7 @@ function AddUser() {
     skills: [],
     id: "",
     location: "",
+    about: ""
   });
 
   const handleInputChange = (e) => {
@@ -50,6 +52,7 @@ function AddUser() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormCompleted(true);
 
     //get existing data and merge it with the formData
     const { data } = await axios.get("/users");
@@ -74,6 +77,14 @@ function AddUser() {
         // Handle the error
         console.error("Error adding user:", error);
       });
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.name !== "" &&
+      formData.surname !== "" &&
+      formData.phone !== ""
+    );
   };
 
   return (
@@ -136,6 +147,20 @@ function AddUser() {
           />
         </div>
         <div className="mb-4">
+          <label htmlFor="about" className="block mb-2 text-gray-700">
+            About
+          </label>
+          <input
+            type="tel"
+            name="about"
+            id="about"
+            value={formData.about}
+            onChange={handleInputChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div className="mb-4">
           <label htmlFor="Location" className="block mb-2 text-gray-700">
             Location
           </label>
@@ -184,13 +209,20 @@ function AddUser() {
           </select>
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-10 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Add New User
+        {formCompleted ? (
+        <button 
+        type="submit"
+        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >Add User</button>
+      ) : (
+        <button 
+        type="submit"
+        disabled={!isFormValid()}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          User Added
         </button>
-      </form>
+      )}
+    </form>
     </div>
   );
 }
