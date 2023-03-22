@@ -5,7 +5,7 @@ const express = require("express");
 const multer  = require('multer')
 const fs = require("fs");
 
-const port = process.env.PORT || 5000 ;
+// const port = process.env.PORT || 5000 ;
 const app = express();
 
 //***     Configure express     **//
@@ -110,6 +110,6 @@ if(process.env.NODE_ENV === "production") {
 
 }
 
-app.listen(port, () => {
-  console.log(`Server Started on port ${port}`);
+app.listen(process.env.PORT || 6000, () => {
+  console.log(`Server Started on port 5000`);
 });
