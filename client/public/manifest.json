@@ -1,9 +1,9 @@
 {
-  "short_name": "Booking System",
-  "name": "Booking system",
+  "short_name": "Freelancer Booking App",
+  "name": "Freelancer Booking App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
