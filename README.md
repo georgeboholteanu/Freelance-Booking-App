@@ -41,10 +41,7 @@ Frameworks used:
 ![Badge Name](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Badge Name](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Badge Name](https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white)
-![Badge Name](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-![Badge Name](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![Badge Name](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) 
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![Badge Name](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)
 
@@ -53,19 +50,12 @@ Frameworks used:
 Initial Wireframe design:
 ![Screenshot-of-Wireframe](./client/public/assets/images/Wireframe.png)
 
-Inspiration:
-![Screenshot-of-design-inspiration](./client/public/assets/images/Youtube-ReactJs-Travel-website-design-inspo-banner-byIzraTech.png)
-
-
-
 
 ### Desktop view:
+![Screenshot-of-Homepage](./client/public/assets/images/Freelancer-Booking-App-Homepage.png)
 
 
-
-### Mobile view:
-
-
+![Screenshot-of-Homepage2](./client/public/assets/images/Freelancer-Booking-App-Homepage2.png)
 
 ## Link
 
