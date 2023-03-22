@@ -2,14 +2,14 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "server": "nodemon ./server/server.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run dev\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run dev\" \"npm start  --prefix client\" \"npm start\""
+    "server": "nodemon server.js",
+    "develop": "npm run start",
+    "start": "npm start"
   },
   "keywords": [],
   "author": "",
