@@ -1,9 +1,9 @@
+require("dotenv").config();
 const data = require("./src/users.json");
 const path = require("path");
 const express = require("express");
 const multer  = require('multer')
 const fs = require("fs");
-require("dotenv").config();
 
 const port = process.env.PORT || 5000 ;
 const app = express();
