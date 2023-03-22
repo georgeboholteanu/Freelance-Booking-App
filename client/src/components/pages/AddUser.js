@@ -104,7 +104,7 @@ function AddUser() {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="max-w-md mx-auto mt-4 justify-center"
+        className="max-w-md mx-auto mt-4 justify-center min-h-screen"
       >
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2 text-gray-700">
