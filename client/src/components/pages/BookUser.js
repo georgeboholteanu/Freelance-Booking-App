@@ -76,7 +76,7 @@ const BookUser = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4 BookingForm min-h-screen">
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4 BookingForm">
       <div className="mb-4">
           <label htmlFor="name" className="block mb-2 text-gray-700">
           Name
