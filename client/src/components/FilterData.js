@@ -212,7 +212,7 @@ function FilterData() {
               /> */}
               <div 
               className="h-80 bg-cover bg-center" 
-              style={{backgroundImage:`url('http://localhost:5000/static/images/${user.picture}')`}}
+              style={{backgroundImage:`url('./static/images/${user.picture}')`}}
               >
               </div>
               <div className="px-6 py-4">

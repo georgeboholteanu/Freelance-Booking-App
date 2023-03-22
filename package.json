@@ -1,0 +1,11 @@
+{
+  "name": "freelance-booking-app",
+  "version": "1.0.0",
+  "description": "## Description This Single Page Application is a user-friendly platform designed to facilitate the search and hiring of talented freelancers for various purposes, including personal projects, company migration, training opportunities, and collaborative work. To achieve this, we used the data from Random people generator website, which we adjusted slightly to fit our needs, and the images have been downloaded from https://unsplash.com/.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
