@@ -202,14 +202,19 @@ function FilterData() {
         ) : (
           users.map((user) => (
             <div
-              className="w-full h-[550px] bg-gray-100  rounded shadow-lg border-gray-300 flex flex-col"
+              className="w-full h-[550px] justify-between bg-gray-100  rounded shadow-lg border-gray-300 flex flex-col"
               key={user.id}
             >
-              <img
-                className="w-full object-contain min-h-0"
+              {/* <img
+                className="w-full object-cover min-h-0"
                 src={`http://localhost:5000/static/images/${user.picture}`}
                 alt="user avatar"
-              />
+              /> */}
+              <div 
+              className="h-80 bg-cover bg-center" 
+              style={{backgroundImage:`url('http://localhost:5000/static/images/${user.picture}')`}}
+              >
+              </div>
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{`${user.name} ${user.surname}`}</div>
                 <p className="text-gray-700 text-base">
