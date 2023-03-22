@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 const multer  = require('multer')
 const fs = require("fs");
+require("dotenv").config();
 
 const port = process.env.PORT || 5000 ;
 const app = express();
@@ -101,6 +102,13 @@ app.post("/adduser", async (req, res) => {
 
 });
 
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join("client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  })
+
+}
 
 app.listen(port, () => {
   console.log(`Server Started on port ${port}`);
