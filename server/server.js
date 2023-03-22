@@ -4,7 +4,7 @@ const express = require("express");
 const multer  = require('multer')
 const fs = require("fs");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000 ;
 const app = express();
 
 //***     Configure express     **//
