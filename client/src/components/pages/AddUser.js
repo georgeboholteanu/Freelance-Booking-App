@@ -3,6 +3,7 @@ import axios from "axios";
 import { technologies } from "../Variables";
 
 function AddUser() {
+  const [formCompleted, setFormCompleted] = useState(false);
   const [image, setImage] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -66,6 +67,7 @@ function AddUser() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormCompleted(true);
     const { data } = await axios.get("/users");
 
     const newId = await generateNewId(data.users);
@@ -98,6 +100,14 @@ function AddUser() {
         // Handle the error
         console.error("Error adding user:", error);
       });
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.name !== "" &&
+      formData.surname !== "" &&
+      formData.phone !== ""
+    );
   };
 
   return (
@@ -231,14 +241,20 @@ function AddUser() {
           {/* </form> */}
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-10 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          onClick={handleSubmit}
-        >
-          Add New User
+        {formCompleted ? (
+        <button 
+        type="submit"
+        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >User Added</button>
+      ) : (
+        <button 
+        type="submit"
+        disabled={!isFormValid()}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Add User
         </button>
-      </form>
+      )}
+    </form>
     </div>
   );
 }
