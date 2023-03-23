@@ -69,11 +69,11 @@ function FilterData() {
   };
 
   return (
-    <div className="relative m-10 justify-center text-center">
+    <div className="relative m-5  text-center">
       {/* FILTER BUTTONS */}
-      <div className="m-5 bg-gray-500 shadow-lg rounded-md">
+      <div className="lg:m-4 md:m-2 py-1 inline-flex justify-center bg-gray-500 shadow-lg rounded-md">
         <button
-          className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
+          className="lg:mx-5 md:mx-5 mx-2 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
             setIsOpenLocation(!isOpenLocation);
             setIsOpenTechnologies(false);
@@ -83,7 +83,7 @@ function FilterData() {
           <span className="text-lg">Location</span>
         </button>
         <button
-          className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
+          className="lg:mx-5 md:mx-5 mx-2 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
             setIsOpenLocation(false);
             setIsOpenTechnologies(!isOpenTechnologies);
@@ -93,7 +93,7 @@ function FilterData() {
           <span className="text-lg">Skills</span>
         </button>
         <button
-          className="mx-5 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
+          className="lg:mx-5 md:mx-5 mx-2 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
             setIsOpenAvailability(!isOpenAvailability);
             setIsOpenLocation(false);
@@ -110,9 +110,9 @@ function FilterData() {
         className="flex justify-center"
       >
         {isOpenLocation && (
-          <div className="w-max z-10 mb-10 bg-gray-100 rounded-md shadow-lg ">
-            <ul
-              className="py-1 flex mx-5"
+          <div className="w-max z-10 mb-10 my-3 bg-gray-100 rounded-md shadow-lg">
+          <ul
+              className="py-1 mx-5 flex flex-wrap overflow-x-hidden justify-center"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -139,9 +139,9 @@ function FilterData() {
       // ref={dropdownRef}
       >
         {isOpenTechnologies && (
-          <div className="w-max z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
+          <div className="w-max z-10 mb-10 my-3 bg-gray-100 rounded-md shadow-lg">
             <ul
-              className="py-1 flex"
+              className="py-1 mx-5 flex flex-wrap overflow-x-hidden justify-center"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -168,9 +168,9 @@ function FilterData() {
       // ref={dropdownRef}
       >
         {isOpenAvailability && (
-          <div className="w-max z-10 mb-10 bg-gray-100 rounded-md shadow-lg">
+          <div className="w-max z-10 mb-10 my-3 bg-gray-100 rounded-md shadow-lg">
             <ul
-              className="py-1 flex justify-center"
+              className="py-1 mx-5 flex flex-wrap overflow-x-hidden justify-center"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
