@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { RiGithubFill } from 'react-icons/ri';
 
 function Footer() {
   return (
