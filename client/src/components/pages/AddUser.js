@@ -48,9 +48,6 @@ function AddUser() {
     return newId;
   };
 
-  // const handleImageChange = (e) => {
-  //   setImage(e.target.files[0]);
-  // };
 
   const handleUpload = async () => {
     const formDataImg = new FormData();
@@ -220,7 +217,7 @@ function AddUser() {
             ))}
           </select>
         </div>
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label htmlFor="About" className="block mb-2 text-gray-700">
             About
           </label>
@@ -233,7 +230,7 @@ function AddUser() {
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
-        </div>
+        </div> */}
         <div className="mb-4">
           <label htmlFor="picture" className="block mb-2 text-gray-700">
             Profile Picture
