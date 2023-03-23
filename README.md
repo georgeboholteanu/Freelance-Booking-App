@@ -63,7 +63,8 @@ To access github repository:
 https://github.com/georgeboholteanu/Freelance-Booking-App
 
 
-To access netlify deployed website:
+To access deployed website:
+https://freelancer-booking-app.onrender.com/ 
 
 
 ## Credits
