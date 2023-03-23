@@ -4,6 +4,8 @@ const path = require("path");
 const express = require("express");
 const multer  = require('multer')
 const fs = require("fs");
+// const { createProxyMiddleware } = require('http-proxy-middleware');
+// app.use('/api', createProxyMiddleware({ target: 'http://api.example.com', changeOrigin: true }));
 
 // const port = process.env.PORT || 5000 ;
 const app = express();

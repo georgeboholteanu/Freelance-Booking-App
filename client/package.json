@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "https://freelancer-booking-app.onrender.com/ ",
+  "proxy": "http://localhost:6000",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.16",
