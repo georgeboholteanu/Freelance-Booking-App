@@ -7,15 +7,15 @@ function Footer() {
       <div className="flex flex-col items-center justify-center">
         <div className="flex items-center justify-center mb-4">
           <span className="font-semibold text-gray-500">
-            <NavLink to="/" className="inline-block py-2 px-4 text-gray-800 hover:text-gray-500 font-semibold">
+            <NavLink to="/" className="inline-block py-2 px-2 lg:px-4 md:px-4 text-gray-800 hover:text-gray-500 font-semibold">
               Home
             </NavLink>
             {' | '}
-            <NavLink to="/about" className="inline-block py-2 px-4 text-gray-800 hover:text-gray-500 font-semibold">
+            <NavLink to="/about" className="inline-block py-2 px-2 lg:px-4 md:px-4 text-gray-800 hover:text-gray-500 font-semibold">
               About Us
             </NavLink>
             {' | '}
-            <NavLink to="/contact" className="inline-block py-2 px-4 text-gray-800 hover:text-gray-500 font-semibold">
+            <NavLink to="/contact" className="inline-block py-2 px-2 lg:px-4 md:px-4 text-gray-800 hover:text-gray-500 font-semibold">
               Contact Us
             </NavLink>
             {' | '}

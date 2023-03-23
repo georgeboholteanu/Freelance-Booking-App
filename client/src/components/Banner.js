@@ -30,7 +30,7 @@ function Banner() {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <button
-              className="block w-full rounded px-12 py-3 text-sm font-medium text-white bg-red-600 shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+              className="block w-sm rounded px-12 py-3 text-sm font-medium text-white bg-red-600 shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
               onClick={handleHireNowClick}
             >
               Hire now!
@@ -38,7 +38,7 @@ function Banner() {
 
             <NavLink
               to="./about"
-              className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+              className="block w-sm rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
             >
               About
             </NavLink>
