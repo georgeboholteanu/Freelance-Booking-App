@@ -1,20 +1,22 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.14.0"
+  },
   "description": "",
-  "main": "./server/server.js",
+  "main": "server.js",
   "scripts": {
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "server": "nodemon server.js",
-    "develop": "npm run start",
-    "start": "npm start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1"
   },
