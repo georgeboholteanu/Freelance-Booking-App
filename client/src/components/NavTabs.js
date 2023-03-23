@@ -9,7 +9,7 @@ function NavTabs() {
         <NavLink
           to="/"
           onClick={() => window.reload()}
-          className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
+          className="py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
         >
           <FaHome className="mr-2" />
           Home
@@ -18,7 +18,7 @@ function NavTabs() {
       <li className="mr-1">
         <NavLink
           to="/about"
-          className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
+          className="py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
         >
           <FaInfoCircle className="mr-2" />
           About
@@ -27,7 +27,7 @@ function NavTabs() {
       <li className="mr-1">
         <NavLink
           to="/adduser"
-          className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
+          className="py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
         >
           <FaUserPlus className="mr-2" />
           Add Freelancer
@@ -36,7 +36,7 @@ function NavTabs() {
       <li className="mr-1">
         <NavLink
           to="/contact"
-          className="inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
+          className="py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold flex items-center"
         >
           <FaEnvelope className="mr-2" />
           Contact
