@@ -52,7 +52,7 @@ function AddUser() {
   const handleUpload = async () => {
     const formDataImg = new FormData();
     formDataImg.append("user", image);
-    axios
+    await axios
       .post("/upload", formDataImg)
       .then((response) => {
         console.log("File uploaded successfully!");
@@ -235,21 +235,13 @@ function AddUser() {
           <label htmlFor="picture" className="block mb-2 text-gray-700">
             Profile Picture
           </label>
-          {/* <form action="/upload" method="post" enctype="multipart/form-data"> */}
             <input
               type="file"
               name="user"
+              accept=".jpg,.jpeg"
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
-            {/* <button
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold mx-5 mb-10 py-1 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="submit"
-              onClick={handleUpload}
-            >
-              Upload
-            </button> */}
-          {/* </form> */}
         </div>
 
         {formCompleted ? (

@@ -69,9 +69,9 @@ function FilterData() {
   };
 
   return (
-    <div className="relative m-5  text-center">
+    <div className="relative m-5 mb-5 text-center">
       {/* FILTER BUTTONS */}
-      <div className="lg:m-4 md:m-2 py-1 inline-flex justify-center bg-gray-500 shadow-lg rounded-md">
+      <div className="lg:m-4 md:m-2 m-5 lg:py-1 md:py-1 inline-flex justify-center bg-gray-500 shadow-lg rounded-md">
         <button
           className="lg:mx-5 md:mx-5 mx-2 items-center justify-center px-4 py-2 text-lg font-medium text-white rounded-md hover:text-blue-300 "
           onClick={() => {
